@@ -31,5 +31,5 @@ Installing Meos (Simple)
 
 
 Assets:
-[ASSETS](https://mega.nz/file/hHEhSLBb#NtgQPYl-k6fU6wi9qALzDnOmHZ0rxD6R_nofg1kfYco) <br />
+[ASSETS](https://mega.nz/file/Ee11XBaL#Gjn5dbrZrU-ccYsxd1PiUzFWrbhqyhXf6qH0waWeOE) <br />
 [DISCORD](https://discord.gg/NhMQR7uqZX)
