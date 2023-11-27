@@ -9,3 +9,5 @@ fxserver/
 *.bat
 *.lock
 *.json
+server.cfg
+*.bkp

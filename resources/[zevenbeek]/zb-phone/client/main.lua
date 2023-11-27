@@ -1080,15 +1080,17 @@ RegisterNUICallback('PostNewTweet', function(data, cb)
     local TweetMessage = {
         firstName = PhoneData.PlayerData.charinfo.firstname,
         lastName = PhoneData.PlayerData.charinfo.lastname,
-        message = escape_str(data.Message),
+        message = data.Message,
         time = data.Date,
         tweetId = GenerateTweetId(),
         picture = data.Picture
     }
 
-    if string.find(data.Message:lower(), "<script") or string.find(data.Message, "<iframe" or string.find.data.Message:lower(), "</script>") then
-        TriggerServerEvent("zb-smallresources:server:banSpelerPerm")
-    else
+    
+
+    -- if string.find(data.Message:lower(), "<script") or string.find(data.Message, "<iframe" or string.find.data.Message:lower(), "</script>") then
+    --     TriggerServerEvent("zb-smallresources:server:banSpelerPerm")
+    -- else
     
 
         local TwitterMessage = data.Message
@@ -1097,51 +1099,53 @@ RegisterNUICallback('PostNewTweet', function(data, cb)
 
         TriggerServerEvent("qb-phone:server:stuurTweetLog", TwitterMessage)
 
-        for i = 2, #Hashtag, 1 do
-            local Handle = Hashtag[i]:split(" ")[1]
-            if Handle ~= nil or Handle ~= "" then
-                local InvalidSymbol = string.match(Handle, patt)
-                if InvalidSymbol then
-                    Handle = Handle:gsub("%"..InvalidSymbol, "")
-                end
-                TriggerServerEvent('qb-phone_new:server:UpdateHashtags', Handle, TweetMessage)
-            end
-        end
+        -- for i = 2, #Hashtag, 1 do
+        --     local Handle = Hashtag[i]:split(" ")[1]
+        --     if Handle ~= nil or Handle ~= "" then
+        --         local InvalidSymbol = string.match(Handle, patt)
+        --         if InvalidSymbol then
+        --             Handle = Handle:gsub("%"..InvalidSymbol, "")
+        --         end
+        --         TriggerServerEvent('qb-phone_new:server:UpdateHashtags', Handle, TweetMessage)
+        --     end
+        -- end
+      
+        -- for i = 2, #MentionTag, 1 do
+        --     local Handle = MentionTag[i]:split(" ")[1]
+        --     if Handle ~= nil or Handle ~= "" then
+              
+        --         local Fullname = Handle:split("_")
+        --         local Firstname = Fullname[1]
+        --         table.remove(Fullname, 1)
+        --         local Lastname = table.concat(Fullname, " ")
 
-        for i = 2, #MentionTag, 1 do
-            local Handle = MentionTag[i]:split(" ")[1]
-            if Handle ~= nil or Handle ~= "" then
-                local Fullname = Handle:split("_")
-                local Firstname = Fullname[1]
-                table.remove(Fullname, 1)
-                local Lastname = table.concat(Fullname, " ")
-
-                if (Firstname ~= nil and Firstname ~= "") and (Lastname ~= nil and Lastname ~= "") then
-                    if Firstname ~= PhoneData.PlayerData.charinfo.firstname and Lastname ~= PhoneData.PlayerData.charinfo.lastname then
-                        TriggerServerEvent('qb-phone_new:server:MentionedPlayer', Firstname, Lastname, TweetMessage)
-                    else
-                        SetTimeout(2500, function()
-                            SendNUIMessage({
-                                action = "PhoneNotification",
-                                PhoneNotify = {
-                                    title = "Twitter", 
-                                    text = "Je kan jezelf niet vermelden!", 
-                                    icon = "fab fa-twitter",
-                                    color = "#1DA1F2",
-                                },
-                            })
-                        end)
-                    end
-                end
-            end
-        end
-
+        --         -- if (Firstname ~= nil and Firstname ~= "") and (Lastname ~= nil and Lastname ~= "") then
+        --         --     if Firstname ~= PhoneData.PlayerData.charinfo.firstname and Lastname ~= PhoneData.PlayerData.charinfo.lastname then
+        --         --         TriggerServerEvent('qb-phone_new:server:MentionedPlayer', Firstname, Lastname, TweetMessage)
+        --         --     else
+        --         --         SetTimeout(2500, function()
+        --         --             SendNUIMessage({
+        --         --                 action = "PhoneNotification",
+        --         --                 PhoneNotify = {
+        --         --                     title = "Twitter", 
+        --         --                     text = "Je kan jezelf niet vermelden!", 
+        --         --                     icon = "fab fa-twitter",
+        --         --                     color = "#1DA1F2",
+        --         --                 },
+        --         --             })
+        --         --         end)
+        --         --     end
+        --         -- end
+        --     end
+        -- end
+        
         table.insert(PhoneData.Tweets, TweetMessage)
+       
         Citizen.Wait(100)
         cb(PhoneData.Tweets)
 
         TriggerServerEvent('qb-phone_new:server:UpdateTweets', PhoneData.Tweets, TweetMessage)
-    end
+    -- end
 end)
 
 RegisterNetEvent('qb-phone_new:client:TransferMoney')
