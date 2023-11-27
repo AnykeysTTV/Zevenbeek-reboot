@@ -6,7 +6,7 @@ Credits :
 Anykeys,
 FortisRoleplay
 
-voorbeeld server : https://cfx.re/join/58e557
+voorbeeld server : cfx.re/join/jboypa
 
 Installing Meos (Simple) 
 1. Maak een database genaamd meos aan op je game server (vps ect)
