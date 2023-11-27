@@ -130,11 +130,19 @@ QBCore.Commands.Add("announce", "Kondigt een bericht aan naar elke speler.", {},
     TriggerClientEvent('chatMessage', -1, "STAFF BERICHT", "error", msg .. " - " .. tijd)
 end, "admin")
 
--- QBCore.Commands.Add("admin", "Opent het admin menu.", {}, false, function(source, args)
---     local group = QBCore.Functions.GetPermission(source)
---     local dealers = exports['zb-drugs']:GetDealers()
---     TriggerClientEvent('qb-admin:client:openMenu', source, group, dealers)
--- end, "admin")
+QBCore.Commands.Add("admin", "Opent het admin menu.", {}, false, function(source, args)
+    local group = QBCore.Functions.GetPermission(source)
+    local dealers = exports['zb-drugs']:GetDealers()
+    TriggerClientEvent('qb-admin:client:openMenu', source, group, dealers)
+end, "admin")
+
+QBCore.Commands.Add("pban", "Ban een speler op ID", {{name="id", help="Server ID van een speler (online)"}, {name="reden", help="Reden van ban(kan leeg voor cheaten)"}}, true,function(source, args) 
+    local target = tonumber(args[1])
+    local reason = args[2] or "Cheating"
+ 
+    TriggerEvent("qb-admin:server:banPlayer", target, 0, reason)
+  
+end)
 
 QBCore.Commands.Add("report", "Stuurt een report naar de admins (alleen wanneer nodig, MAAK HIER GEEN MISBRUIK VAN)", {{name="message", help="Message"}}, true, function(source, args)
     local msg = table.concat(args, " ")

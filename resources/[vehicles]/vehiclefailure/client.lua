@@ -386,7 +386,7 @@ end)
 RegisterNetEvent("iens:repaira")
 AddEventHandler("iens:repaira", function()
     if IsPedInAnyVehicle(GetPlayerPed(-1), false) and isPedDrivingAVehicle() then
-		TriggerServerEvent("zb-vehicletuning:server:verwijderRepairKit")
+		TriggerServerEvent("fortis-vehicletuning:server:verwijderRepairKit")
 		local tmp_benzine = exports["LegacyFuel"]:GetFuel(GetVehiclePedIsIn(GetPlayerPed(-1), false))
         QBCore.Functions.Progressbar("PROP_HUMAN_BUM_BIN", "Repareren..", math.random(20000, 30000), false, false, {
             disableMovement = true,
@@ -416,7 +416,7 @@ end)
 RegisterNetEvent('iens:repairRadialANWB')
 AddEventHandler('iens:repairRadialANWB', function()
     if isPedDrivingAVehicle() then
-		QBCore.Functions.TriggerCallback("zb-anwbmenu:server:checkDuty", function(response)
+		QBCore.Functions.TriggerCallback("fortis-anwbmenu:server:checkDuty", function(response)
 			if response == 1 then --oke
         		QBCore.Functions.Progressbar("PROP_HUMAN_BUM_BIN", "Repareren..", 15000, false, false, {
         		    disableMovement = true,

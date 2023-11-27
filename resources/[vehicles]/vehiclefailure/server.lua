@@ -19,7 +19,7 @@ QBCore.Commands.Add("repareer", "Repareert een voertuig als ANWB", {}, false, fu
 	end
 end)
 
-QBCore.Functions.CreateCallback("zb-anwbmenu:server:checkDuty", function(source, cb)
+QBCore.Functions.CreateCallback("fortis-anwbmenu:server:checkDuty", function(source, cb)
     local Player = QBCore.Functions.GetPlayer(source)
 
     if Player.PlayerData.job.name == "mechanic" and Player.PlayerData.job.onduty == true then
@@ -41,8 +41,8 @@ QBCore.Functions.CreateUseableItem("repairkit", function(source, item)
     end
 end)
 
-RegisterServerEvent("zb-vehicletuning:server:verwijderRepairKit")
-AddEventHandler("zb-vehicletuning:server:verwijderRepairKit", function()
+RegisterServerEvent("fortis-vehicletuning:server:verwijderRepairKit")
+AddEventHandler("fortis-vehicletuning:server:verwijderRepairKit", function()
     local Player = QBCore.Functions.GetPlayer(source)
 
     Player.Functions.RemoveItem('repairkit', 1)
