@@ -81,7 +81,7 @@ RegisterServerEvent('qb-admin:server:kickPlayer')
 AddEventHandler('qb-admin:server:kickPlayer', function(playerId, reason)
     local src = source
     if QBCore.Functions.HasPermission(src, permissions["kick"]) then
-        DropPlayer(playerId, "Je bent gekickt uit de server met de reden:\n"..reason.."\n\n🔸 Bezoek de discord voor meer informatie: https://discord.gg/QGnSFmcWc4")
+        DropPlayer(playerId, "Je bent gekickt uit de server met de reden:\n"..reason.."\n\n🔸 Bezoek de discord voor meer informatie: https://discord.gg/HZ88aFbFX5")
     end
 end)
 
@@ -96,7 +96,7 @@ AddEventHandler('qb-admin:server:serverKick', function(reason)
     if QBCore.Functions.HasPermission(src, permissions["kickall"]) then
         for k, v in pairs(QBCore.Functions.GetPlayers()) do
             if v ~= src then 
-                DropPlayer(v, "Je bent gekickt uit de server met de reden:\n"..reason.."\n\n🔸 Bezoek de discord voor meer informatie: https://discord.gg/QGnSFmcWc4")
+                DropPlayer(v, "Je bent gekickt uit de server met de reden:\n"..reason.."\n\n🔸 Bezoek de discord voor meer informatie: https://discord.gg/HZ88aFbFX5")
             end
         end
     end
@@ -115,7 +115,7 @@ AddEventHandler('qb-admin:server:banPlayer', function(playerId, time, reason)
         TriggerClientEvent('chatMessage', -1, "SERVER", "error", GetPlayerName(playerId).." is zojuist verbannen voor: "..reason.."")
         TriggerEvent("qb-log:server:CreateLog", "banLogs", "Nieuwe ban:", "red", "**Speler:** " ..GetPlayerName(playerId).. "\n**Reden:** "..reason.."\n\nUnban op: "..timeTable["day"].. "/" .. timeTable["month"] .. "/" .. timeTable["year"] .. " " .. timeTable["hour"].. ":" .. timeTable["min"])
         QBCore.Functions.ExecuteSql(false, "INSERT INTO `bans` (`name`, `steam`, `license`, `discord`,`ip`, `reason`, `expire`, `bannedby`) VALUES ('"..GetPlayerName(playerId).."', '"..GetPlayerIdentifiers(playerId)[1].."', '"..GetPlayerIdentifiers(playerId)[2].."', '"..GetPlayerIdentifiers(playerId)[3].."', '"..GetPlayerIdentifiers(playerId)[4].."', '"..reason.."', "..banTime..", '"..GetPlayerName(src).."')")
-        DropPlayer(playerId, "Je bent verbannen van de server met de reden:\n"..reason.."\n\nBan verloopt: "..timeTable["day"].. "/" .. timeTable["month"] .. "/" .. timeTable["year"] .. " " .. timeTable["hour"].. ":" .. timeTable["min"] .. "\n🔸 Join de discord voor meer informatie: https://https://discord.gg/QGnSFmcWc4")
+        DropPlayer(playerId, "Je bent verbannen van de server met de reden:\n"..reason.."\n\nBan verloopt: "..timeTable["day"].. "/" .. timeTable["month"] .. "/" .. timeTable["year"] .. " " .. timeTable["hour"].. ":" .. timeTable["min"] .. "\n🔸 Join de discord voor meer informatie: https://https://discord.gg/HZ88aFbFX5")
     end
 end)
 

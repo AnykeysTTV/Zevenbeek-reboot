@@ -37,7 +37,7 @@ exp('requestScreenshot', (options: any, cb: (result: string) => void) => {
 
     realOptions.resultURL = null;
     realOptions.targetField = null;
-    realOptions.targetURL = `https://${GetCurrentResourceName()}/screenshot_created`;
+    realOptions.targetURL = `http://${GetCurrentResourceName()}/screenshot_created`;
     
     realOptions.correlation = registerCorrelation(realCb);
 
@@ -48,6 +48,7 @@ exp('requestScreenshot', (options: any, cb: (result: string) => void) => {
 
 exp('requestScreenshotUpload', (url: string, field: string, options: any, cb: (result: string) => void) => {
     const realOptions = (cb !== undefined) ? options : {
+        headers: {},
         encoding: 'jpg'
     };
 
@@ -55,7 +56,7 @@ exp('requestScreenshotUpload', (url: string, field: string, options: any, cb: (r
 
     realOptions.targetURL = url;
     realOptions.targetField = field;
-    realOptions.resultURL = `https://${GetCurrentResourceName()}/screenshot_created`;
+    realOptions.resultURL = `http://${GetCurrentResourceName()}/screenshot_created`;
     
     realOptions.correlation = registerCorrelation(realCb);
 
@@ -67,7 +68,7 @@ exp('requestScreenshotUpload', (url: string, field: string, options: any, cb: (r
 onNet('screenshot_basic:requestScreenshot', (options: any, url: string) => {
     options.encoding = options.encoding || 'jpg';
 
-    options.targetURL = `https://${GetCurrentServerEndpoint()}${url}`;
+    options.targetURL = `http://${GetCurrentServerEndpoint()}${url}`;
     options.targetField = 'file';
     options.resultURL = null;
 

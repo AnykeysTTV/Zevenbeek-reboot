@@ -52,7 +52,11 @@ AddEventHandler('playerConnecting', function(playerName, setKickReason, deferral
         QBCore.Functions.Kick(src, 'Je moet steam open hebben om te spelen.', setKickReason, deferrals)
         CancelEvent()
 		return false
-	elseif (QBConfig.IdentifierType == "license" and (steamid:sub(1,6) == "license:") == false) then
+	elseif (QBConfig.IdentifierType == "discord" and (steam:sub(1,8) == "discord:") == false) then 
+		QBCore.Functions.Kick(src, "Geen discord id gevonden", setKickReason, deferrals)
+		CancelEvent()
+		return false	
+	elseif (QBConfig.IdentifierType == "license" and (steamid:sub(1,8) == "license:") == false) then
 		QBCore.Functions.Kick(src, 'Geen socialclub license gevonden.', setKickReason, deferrals)
         CancelEvent()
 		return false

@@ -179,26 +179,47 @@ $(document).on('click', '#whatsapp-openedchat-send', function(e){
 
     var Message = $("#whatsapp-openedchat-message").val();
 
-    if (Message !== null && Message !== undefined && Message !== "") {
+    if(Message == null || Message.length < 0 || Message === ''){
+        QB.Phone.Notifications.Add("fab fa-whatsapp", "Whatsapp", "Je kan geen leeg bericht verzenden!", "#25D366", 1750);
+        return;
+    }
+
+    var clean = DOMPurify.sanitize(Message , {
+        ALLOWED_TAGS: [],
+        ALLOWED_ATTR: []
+    });
+    if (clean == '') clean = 'Hmm, I shouldn\'t be able to do this...'
+
+    if(clean !== ''){
         $.post('https://zb-phone/SendMessage', JSON.stringify({
             ChatNumber: OpenedChatData.number,
             ChatDate: GetCurrentDateKey(),
-            ChatMessage: Message,
+            ChatMessage: clean,
             ChatTime: FormatMessageTime(),
             ChatType: "message",
         }));
         $("#whatsapp-openedchat-message").val("");
-    } else {
-        QB.Phone.Notifications.Add("fab fa-whatsapp", "Whatsapp", "Je kan geen leeg bericht verzenden!", "#25D366", 1750);
-    }
+    } 
 });
 
 $(document).on('keypress', function (e) {
     if (OpenedChatData.number !== null) {
         if(e.which === 13){
             var Message = $("#whatsapp-openedchat-message").val();
-    
+
             if (Message !== null && Message !== undefined && Message !== "") {
+                QB.Phone.Notifications.Add("fab fa-whatsapp", "Whatsapp", "Je kan geen leeg bericht versturen!", "#25D366", 1750);
+                return;
+            }
+            
+            var clean = DOMPurify.sanitize(Message , {
+                ALLOWED_TAGS: [],
+                ALLOWED_ATTR: []
+            });
+            if (clean == '') clean = 'Hmm, I shouldn\'t be able to do this...'
+
+    
+           if(clean !== ''){
                 $.post('https://zb-phone/SendMessage', JSON.stringify({
                     ChatNumber: OpenedChatData.number,
                     ChatDate: GetCurrentDateKey(),
@@ -207,8 +228,6 @@ $(document).on('keypress', function (e) {
                     ChatType: "message",
                 }));
                 $("#whatsapp-openedchat-message").val("");
-            } else {
-                QB.Phone.Notifications.Add("fab fa-whatsapp", "Whatsapp", "Je kan geen leeg bericht versturen!", "#25D366", 1750);
             }
         }
     }

@@ -16,4 +16,3 @@ files {
 }
 
 ui_page 'dist/ui.html'
-client_script '@zb-guard/03923.lua'

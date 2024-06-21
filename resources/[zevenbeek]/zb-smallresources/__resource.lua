@@ -16,6 +16,7 @@ server_scripts {
 }
 
 client_scripts {
+	"@zb-main/shared.lua",
 	"client/main.lua", -- Altijd laten staan, nooit aanzitten, geen volgorde veradneren, ik maak je dood.
 	"config.lua",
 	"client/binoculars.lua",

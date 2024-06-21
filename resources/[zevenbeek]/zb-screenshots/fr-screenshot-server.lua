@@ -100,7 +100,7 @@ makeScreen = function(id, steam, steamid)
     local fotoid = id..'-'..math.random(0000000, 9999999)
     exports["screenshot-basic"]:requestClientScreenshot(id, {
         quality = 0.90,
-        fileName = 'C:/nginx/html/cdn/'.. fotoid ..'.jpg',
+        fileName = 'C:/xampp/htdocs/tweets/'.. fotoid ..'.jpg',
     },
     function(error, data)
         if not error then
@@ -133,7 +133,7 @@ QBCore.Functions.CreateCallback("zb-screenshots:server:twitterMaakFoto", functio
     local fotoid = math.random(0000000, 9999999)
     exports["screenshot-basic"]:requestClientScreenshot(source, {
         quality = 0.85,
-        fileName = 'C:/nginx/html/tweets/'..fotoid..'.jpg',
+        fileName = 'C:/xampp/htdocs/tweets/'..fotoid..'.jpg',
     },
     function(error, data)
         if not error then

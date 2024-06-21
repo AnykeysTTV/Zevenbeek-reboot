@@ -11,3 +11,5 @@ fxserver/
 *.json
 server.cfg
 *.bkp
+dev_config/**
+key.cfg

@@ -16,7 +16,7 @@ AddEventHandler("QBCore:Client:OnPlayerLoaded", function()
             isJarig = true 
             Citizen.Wait(3000)
             TriggerServerEvent("qb-phone:server:sendNewMail", {
-                sender = "Gemeente Fortis",
+                sender = "Gemeente Zevenbeek",
                 subject = "Je bent jarig!",
                 message = "Gefeliciteerd! <br> Je bent jarig vandaag, wat leuk! <br><br> Om dit te vieren hebben we voor jou een cadeautje klaar staan. Klik hieronder op het vinkje om hem op te halen!",
                 button = {

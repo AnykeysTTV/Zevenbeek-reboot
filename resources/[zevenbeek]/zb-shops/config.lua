@@ -1156,18 +1156,18 @@ Config.Locations = {
         },
         ["products"] = Config.Products["cayoperico"],
     },
-    ["servershop"] = {
-        ["label"] = "Server winkel",
-        ["type"] = "servershop",
-         ["coords"] = {
-            [1] = {
-                ["x"] = -1343.05, 
-                ["y"] = -344.03, 
-                ["z"] = 36.65,
-            }
-        },
-        ["products"] = Config.Products["servershop"],
-    },
+    -- ["servershop"] = {
+    --     ["label"] = "Server winkel",
+    --     ["type"] = "servershop",
+    --      ["coords"] = {
+    --         [1] = {
+    --             ["x"] = -1343.05, 
+    --             ["y"] = -344.03, 
+    --             ["z"] = 36.65,
+    --         }
+    --     },
+    --     ["products"] = Config.Products["servershop"],
+    -- },
     ["giambone"] = {
         ["label"] = "Giambone",
         ["type"] = "giambone",

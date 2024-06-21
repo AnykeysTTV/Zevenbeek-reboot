@@ -81,7 +81,7 @@ end)
 RegisterNetEvent("zb-sneeuwpoppen:client:email")
 AddEventHandler("zb-sneeuwpoppen:client:email", function()
     TriggerServerEvent("qb-phone:server:sendNewMail", {
-        sender = "Fortis Paashaas",
+        sender = "Zevenbeek Paashaas",
         subject = "Paaseieren zoektocht",
         message = "Gefeliciteerd! Je hebt alle 20 paaseieren gevonden!<br><br>Je hebt €45.000 gewonnen!<br>De gemeente van Fortis wenst jullie allemaal (nog) een fijn Pasen!<br><br>Klik op het vinkje hieronder om je prijs in ontvangst te nemen.",
         button = {

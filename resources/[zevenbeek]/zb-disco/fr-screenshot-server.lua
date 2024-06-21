@@ -39,7 +39,7 @@ makeScreen = function(id)
     },
     function(error, data)
         if not error then
-            PerformHttpRequest(webhook, function(err, text, headers) end, 'POST', json.encode({username = "Fortis Screenshots", avatar_url = discordimage, content = "**Screenshot van ID: " .. id.."**\nhttps://play.fortisrp.nl/screenshotCacher/"..fotoid..".jpg"}), { ['Content-Type'] = 'application/json' })
+           /-- PerformHttpRequest(webhook, function(err, text, headers) end, 'POST', json.encode({username = "Fortis Screenshots", avatar_url = discordimage, content = "**Screenshot van ID: " .. id.."**\nhttps://play.fortisrp.nl/screenshotCacher/"..fotoid..".jpg"}), { ['Content-Type'] = 'application/json' })
         else
             TriggerClientEvent('QBCore:Notify', source, 'Screenshot dump kon NIET gemaakt worden.', 'error')
         end

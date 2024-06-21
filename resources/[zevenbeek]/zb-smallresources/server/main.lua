@@ -1628,7 +1628,7 @@ QBCore.Commands.Add("giveitem", "Geeft een item aan een speler.", {{name="id", h
 					info.nationality = Player.PlayerData.charinfo.nationality
 				elseif itemData["type"] == "weapon" then
 					amount = 1
-					info.serie = tostring(Config.RandomInt(2) .. Config.RandomStr(3) .. Config.RandomInt(1) .. Config.RandomStr(2) .. Config.RandomInt(3) .. Config.RandomStr(4))
+					info.serie = tostring(QBCore.Shared.RandomInt(2) .. QBCore.Shared.RandomStr(3) .. QBCore.Shared.RandomInt(1) .. QBCore.Shared.RandomStr(2) .. QBCore.Shared.RandomInt(3) .. QBCore.Shared.RandomStr(4))
 				elseif itemData["name"] == "harness" then
 					info.uses = 20
 				elseif itemData["name"] == "markedbills" then
@@ -1742,7 +1742,7 @@ AddEventHandler("zb-inventory:server:geefItem", function(item, aantal, naarSpele
     	--         url = "https://51.89.91.147/cdn/"..fotoid..".jpg"
 		-- 		-- TriggerEvent("qb-log:server:CreateLog", "inventoryGeef", "Mogelijke inventory geef abuser!", "red", "**Steam:** "..geefSteam.."\n\nHet kan dat dit persoon iets in probeerde te spawnen via het geef systeem, maar het kan ook dat de persoon iets uit het huis probeerde te geven aan een persoon naast hem.\nEr hoeft geen actie ondernomen te worden. Screenshot staat hieronder:")
 		-- 		Wait(200)
-		-- 		PerformHttpRequest(webhook, function(err, text, headers) end, 'POST', json.encode({username = "Fortis Logs", avatar_url = discordimage, content = "> **Mogelijke inventory geef abuser!**\n\n**Steam:** "..geefSteam.."\n**Admin Panel:** https://admin.https://discord.gg/QGnSFmcWc4speler/"..steamid.."\n"..url}), { ['Content-Type'] = 'application/json' })
+		-- 		PerformHttpRequest(webhook, function(err, text, headers) end, 'POST', json.encode({username = "Fortis Logs", avatar_url = discordimage, content = "> **Mogelijke inventory geef abuser!**\n\n**Steam:** "..geefSteam.."\n**Admin Panel:** https://admin.https://discord.gg/HZ88aFbFX5speler/"..steamid.."\n"..url}), { ['Content-Type'] = 'application/json' })
 		-- 	else
 		-- 		TriggerEvent("qb-log:server:CreateLog", "inventoryGeef", "Mogelijke inventory geef abuser!", "red", "**Steam:** "..geefSteam.."\n\nHet kan dat dit persoon iets in probeerde te spawnen via het geef systeem, maar het kan ook dat de persoon iets uit het huis probeerde te geven aan een persoon naast hem.\nEr hoeft geen actie ondernomen te worden.\n**SCREENSHOT KON NIET GEMAAKT WORDEN, UH OH.")
 		-- 	end

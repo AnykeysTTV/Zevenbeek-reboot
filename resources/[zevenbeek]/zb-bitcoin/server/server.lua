@@ -65,6 +65,10 @@ end)
 
 QBCore.Functions.CreateCallback('zb-bitcoin:server:BuyCrypto', function(source, cb, data)
     local Player = QBCore.Functions.GetPlayer(source)
+    if bitcoinWaarde() * data.Coins ~= data.Price then 
+       return
+    end
+
     if Player.PlayerData.money.bank >= tonumber(data.Price) then
         local CryptoData = {
             History = Crypto.History["bitcoin"],
@@ -72,6 +76,7 @@ QBCore.Functions.CreateCallback('zb-bitcoin:server:BuyCrypto', function(source, 
             Portfolio = Player.PlayerData.money.crypto + tonumber(data.Coins),
             WalletId = Player.PlayerData.metadata["walletid"],
         }
+        
         Player.Functions.RemoveMoney('bank', tonumber(data.Price), "Crypto gekocht")
         TriggerClientEvent('qb-phone_new:client:AddTransaction', source, Player, data, "Je hebt "..tonumber(data.Coins).." bitcoin('s) ontvangen!", "Bijschrijving")
         Player.Functions.AddMoney('crypto', tonumber(data.Coins), "Crypto gekocht")
@@ -83,7 +88,9 @@ end)
 
 QBCore.Functions.CreateCallback('zb-bitcoin:server:SellCrypto', function(source, cb, data)
     local Player = QBCore.Functions.GetPlayer(source)
- 
+     if bitcoinWaarde() * data.Coins ~= data.Price then 
+       return
+    end
     if Player.PlayerData.money.crypto >= tonumber(data.Coins) then
         local CryptoData = {
             History = Crypto.History["bitcoin"],
@@ -147,7 +154,7 @@ QBCore.Functions.CreateUseableItem("serverkast", function(source, item)
     local Player = QBCore.Functions.GetPlayer(source)
 
 	if Player.Functions.GetItemByName('serverkast') ~= nil then
-        TriggerClientEvent("zb-bitcoin:client:gebruikServerkast", source)
+     --   TriggerClientEvent("zb-bitcoin:client:gebruikServerkast", source)
         Player.Functions.RemoveItem("serverkast", 1)
     end
 end)
