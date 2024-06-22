@@ -7,10 +7,8 @@
 notWhitelistedMessage = "Join de Discord om de server te joinen! - https://discord.gg/yAaPrEk6VU" -- Message displayed when they are not whitelist with the role
 
 whitelistRoles = { -- Role nickname(s) needed to pass the whitelist
-    "1007677177111789700", --Staff
-    "1007677177111789701",
-    "1007677177208262840", -- whitelisted
-    "1007677177111789706", -- Inwoner
+    "1183408192324124753", --Staff
+    "1254036998180573256", -- Inwoner
 }
 
 
