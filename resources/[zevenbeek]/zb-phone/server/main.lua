@@ -908,7 +908,7 @@ AddEventHandler("zb-phone:server:banSpeler", function(source)
     local src = source
     local reason = "Hacken met script tags"
     QBCore.Functions.ExecuteSql(false, "INSERT INTO `bans` (`name`, `steam`, `license`, `discord`,`ip`, `reason`, `expire`, `bannedby`) VALUES ('"..GetPlayerName(src).."', '"..GetPlayerIdentifiers(src)[1].."', '"..GetPlayerIdentifiers(src)[2].."', '"..GetPlayerIdentifiers(src)[3].."', '"..GetPlayerIdentifiers(src)[4].."', '"..reason.."', 2145913200, '"..GetPlayerName(src).."')")
-    DropPlayer(src, "Verbannen voor hacken. Script tags. Als je denkt dat dit onterecht is join dan onze Discord en maak een ticket aan: https://discord.gg/dAxTgAkkSn")
+    DropPlayer(src, "Verbannen voor hacken. Script tags. Als je denkt dat dit onterecht is join dan onze Discord en maak een ticket aan: https://discord.gg/yAaPrEk6VU")
 end)
 
 function SplitStringToArray(string)

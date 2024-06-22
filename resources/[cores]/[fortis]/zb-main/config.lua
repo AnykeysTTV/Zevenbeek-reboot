@@ -24,8 +24,8 @@ QBConfig.Player.Bloodtypes = {
 
 QBConfig.Server = {} 
 QBConfig.Server.closed = false -- 
-QBConfig.Server.closedReason = "🔸 Er is op dit moment onderhoud gaande... Join de Discord voor meer informatie: https://discord.gg/HZ88aFbFX5" -- Reason message to display when people can't join the server
+QBConfig.Server.closedReason = "🔸 Er is op dit moment onderhoud gaande... Join de Discord voor meer informatie: https://discord.gg/yAaPrEk6VU" -- Reason message to display when people can't join the server
 QBConfig.Server.uptime = 0 -- Time the server has been up.
 QBConfig.Server.whitelist = false -- Enable or disable whitelist on the server
-QBConfig.Server.discord = "https://discord.gg/HZ88aFbFX5" -- Discord invite link
+QBConfig.Server.discord = "https://discord.gg/yAaPrEk6VU" -- Discord invite link
 QBConfig.Server.PermissionList = {} -- permission list

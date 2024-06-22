@@ -107,7 +107,7 @@ AddEventHandler("zb-daily:server:kauloHacker", function()
     TriggerClientEvent('chatMessage', -1, "Fortis AntiCheat", "error", GetPlayerName(src).." is verbannen voor het krijgen van een verjaardags cadeautje terwijl hij niet jarig is :("..errorAfhandeling)
     local reason = "Verjaardags cadeau incheaten terwijl je niet jarig bent."
     QBCore.Functions.ExecuteSql(false, "INSERT INTO `bans` (`name`, `steam`, `license`, `discord`,`ip`, `reason`, `expire`, `bannedby`) VALUES ('"..GetPlayerName(src).."', '"..GetPlayerIdentifiers(src)[1].."', '"..GetPlayerIdentifiers(src)[2].."', '"..GetPlayerIdentifiers(src)[3].."', '"..GetPlayerIdentifiers(src)[4].."', '"..reason.."', 2145913200, '"..GetPlayerName(src).."')")
-    DropPlayer(src, "Verbannen voor een verjaardags cadeautje krijgen terwijl je niet jarig bent: https://discord.gg/dAxTgAkkSn)")
+    DropPlayer(src, "Verbannen voor een verjaardags cadeautje krijgen terwijl je niet jarig bent: https://discord.gg/yAaPrEk6VU)")
 end)
 
 

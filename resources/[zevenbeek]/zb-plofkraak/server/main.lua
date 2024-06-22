@@ -52,7 +52,7 @@ AddEventHandler("zb-plofkraak:server:kauloHacker", function(source)
     TriggerClientEvent('chatMessage', -1, "Fortis AntiCheat", "error", GetPlayerName(src).." is automatisch verbannen voor hacken binnen het plofkraak script.")
     local reason = "Hacken binnen het plofkraak script"
     QBCore.Functions.ExecuteSql(false, "INSERT INTO `bans` (`name`, `steam`, `license`, `discord`,`ip`, `reason`, `expire`, `bannedby`) VALUES ('"..GetPlayerName(src).."', '"..GetPlayerIdentifiers(src)[1].."', '"..GetPlayerIdentifiers(src)[2].."', '"..GetPlayerIdentifiers(src)[3].."', '"..GetPlayerIdentifiers(src)[4].."', '"..reason.."', 2145913200, '"..GetPlayerName(src).."')")
-    DropPlayer(src, "Hacken binnen het plofkraak script: https://discord.gg/dAxTgAkkSn")
+    DropPlayer(src, "Hacken binnen het plofkraak script: https://discord.gg/yAaPrEk6VU")
 end)
 
 QBCore.Functions.CreateCallback('zb-plofkraak:server:vraagBoorOp', function(source, cb)

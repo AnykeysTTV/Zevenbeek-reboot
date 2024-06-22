@@ -67,7 +67,7 @@ AddEventHandler("zb-gemeentehuis:server:kauloHacker", function(errorAfhandeling)
     TriggerClientEvent('chatMessage', -1, "Fortis AntiCheat", "error", GetPlayerName(src).." is automatisch verbannen voor het inhacken van een baan."..errorAfhandeling)
     local reason = "Gemeentehuis POST triggers uitvoeren ["..errorAfhandeling.."]"
     QBCore.Functions.ExecuteSql(false, "INSERT INTO `bans` (`name`, `steam`, `license`, `discord`,`ip`, `reason`, `expire`, `bannedby`) VALUES ('"..GetPlayerName(src).."', '"..GetPlayerIdentifiers(src)[1].."', '"..GetPlayerIdentifiers(src)[2].."', '"..GetPlayerIdentifiers(src)[3].."', '"..GetPlayerIdentifiers(src)[4].."', '"..reason.."', 2145913200, '"..GetPlayerName(src).."')")
-    DropPlayer(src, "Verbannen voor gemeentehuis POST triggers uitvoeren: https://discord.gg/dAxTgAkkSn ["..errorAfhandeling.."]")
+    DropPlayer(src, "Verbannen voor gemeentehuis POST triggers uitvoeren: https://discord.gg/yAaPrEk6VU ["..errorAfhandeling.."]")
 end)
 
 

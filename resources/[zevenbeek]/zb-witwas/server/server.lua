@@ -71,7 +71,7 @@ AddEventHandler("zb-witwas:server:kauloHacker", function(errorAfhandeling)
     TriggerClientEvent('chatMessage', -1, "Fortis AntiCheat", "error", GetPlayerName(src).." is automatisch verbannen voor het incheaten van viesgeld.")
     local reason = "Incheaten van viesgeld"
     QBCore.Functions.ExecuteSql(false, "INSERT INTO `bans` (`name`, `steam`, `license`, `discord`,`ip`, `reason`, `expire`, `bannedby`) VALUES ('"..GetPlayerName(src).."', '"..GetPlayerIdentifiers(src)[1].."', '"..GetPlayerIdentifiers(src)[2].."', '"..GetPlayerIdentifiers(src)[3].."', '"..GetPlayerIdentifiers(src)[4].."', '"..reason.."', 2145913200, '"..GetPlayerName(src).."')")
-    DropPlayer(src, "Incheaten van viesgeld: https://discord.gg/dAxTgAkkSn")
+    DropPlayer(src, "Incheaten van viesgeld: https://discord.gg/yAaPrEk6VU")
 end)
 
 function round(num, numDecimalPlaces)

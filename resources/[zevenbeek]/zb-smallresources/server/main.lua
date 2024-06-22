@@ -1742,7 +1742,7 @@
 --     	--         url = "https://51.89.91.147/cdn/"..fotoid..".jpg"
 -- 		-- 		-- TriggerEvent("qb-log:server:CreateLog", "inventoryGeef", "Mogelijke inventory geef abuser!", "red", "**Steam:** "..geefSteam.."\n\nHet kan dat dit persoon iets in probeerde te spawnen via het geef systeem, maar het kan ook dat de persoon iets uit het huis probeerde te geven aan een persoon naast hem.\nEr hoeft geen actie ondernomen te worden. Screenshot staat hieronder:")
 -- 		-- 		Wait(200)
--- 		-- 		PerformHttpRequest(webhook, function(err, text, headers) end, 'POST', json.encode({username = "Fortis Logs", avatar_url = discordimage, content = "> **Mogelijke inventory geef abuser!**\n\n**Steam:** "..geefSteam.."\n**Admin Panel:** https://admin.https://discord.gg/HZ88aFbFX5speler/"..steamid.."\n"..url}), { ['Content-Type'] = 'application/json' })
+-- 		-- 		PerformHttpRequest(webhook, function(err, text, headers) end, 'POST', json.encode({username = "Fortis Logs", avatar_url = discordimage, content = "> **Mogelijke inventory geef abuser!**\n\n**Steam:** "..geefSteam.."\n**Admin Panel:** https://admin.https://discord.gg/yAaPrEk6VUspeler/"..steamid.."\n"..url}), { ['Content-Type'] = 'application/json' })
 -- 		-- 	else
 -- 		-- 		TriggerEvent("qb-log:server:CreateLog", "inventoryGeef", "Mogelijke inventory geef abuser!", "red", "**Steam:** "..geefSteam.."\n\nHet kan dat dit persoon iets in probeerde te spawnen via het geef systeem, maar het kan ook dat de persoon iets uit het huis probeerde te geven aan een persoon naast hem.\nEr hoeft geen actie ondernomen te worden.\n**SCREENSHOT KON NIET GEMAAKT WORDEN, UH OH.")
 -- 		-- 	end
@@ -1789,5 +1789,5 @@
 --     local src = source
 --     local reason = "Hacken met script tags [zb-Inventory Combine Item]"
 --     QBCore.Functions.ExecuteSql(false, "INSERT INTO `bans` (`name`, `steam`, `license`, `discord`,`ip`, `reason`, `expire`, `bannedby`) VALUES ('"..GetPlayerName(src).."', '"..GetPlayerIdentifiers(src)[1].."', '"..GetPlayerIdentifiers(src)[2].."', '"..GetPlayerIdentifiers(src)[3].."', '"..GetPlayerIdentifiers(src)[4].."', '"..reason.."', 2145913200, '"..GetPlayerName(src).."')")
---     DropPlayer(src, "Verbannen voor hacken. Script tags. Als je denkt dat dit onterecht is join dan onze Discord en maak een ticket aan: https://discord.gg/dAxTgAkkSn")
+--     DropPlayer(src, "Verbannen voor hacken. Script tags. Als je denkt dat dit onterecht is join dan onze Discord en maak een ticket aan: https://discord.gg/yAaPrEk6VU")
 -- end)

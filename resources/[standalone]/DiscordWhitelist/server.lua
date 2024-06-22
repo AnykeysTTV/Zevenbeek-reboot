@@ -52,6 +52,6 @@ AddEventHandler("playerConnecting", function(name, setCallback, deferrals)
             end
         end
     else
-        deferrals.done("Discord is niet gevonden. Zorg dat Discord open staat om te joinen (Desktop variant). https://discord.gg/HZ88aFbFX5")
+        deferrals.done("Discord is niet gevonden. Zorg dat Discord open staat om te joinen (Desktop variant). https://discord.gg/yAaPrEk6VU")
     end
 end)

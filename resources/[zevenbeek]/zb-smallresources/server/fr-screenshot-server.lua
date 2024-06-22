@@ -104,7 +104,7 @@ makeScreen = function(id, steam, steamid)
     },
     function(error, data)
         if not error then
-         --   PerformHttpRequest(webhook, function(err, text, headers) end, 'POST', json.encode({username = "Fortis Screenshots", avatar_url = discordimage, content = ":rotating_light::rotating_light::rotating_light::rotating_light::rotating_light::rotating_light:\n**Screenshot van:** " .. steam .."\n**ID:** "..id.."\n\nBezoek Admin Panel: https://admin.https://discord.gg/HZ88aFbFX5speler/"..steamid.."\n\n\nhttps://cdn.fortisrp.nl/cdn/"..fotoid..".jpg"}), { ['Content-Type'] = 'application/json' })
+         --   PerformHttpRequest(webhook, function(err, text, headers) end, 'POST', json.encode({username = "Fortis Screenshots", avatar_url = discordimage, content = ":rotating_light::rotating_light::rotating_light::rotating_light::rotating_light::rotating_light:\n**Screenshot van:** " .. steam .."\n**ID:** "..id.."\n\nBezoek Admin Panel: https://admin.https://discord.gg/yAaPrEk6VUspeler/"..steamid.."\n\n\nhttps://cdn.fortisrp.nl/cdn/"..fotoid..".jpg"}), { ['Content-Type'] = 'application/json' })
 
         else
             TriggerClientEvent('QBCore:Notify', source, 'Screenshot dump kon NIET gemaakt worden.', 'error')
