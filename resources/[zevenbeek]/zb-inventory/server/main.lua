@@ -383,7 +383,11 @@ AddEventHandler('inventory:server:SetInventoryData', function(fromInventory, toI
 	if fromInventory == "player" or fromInventory == "hotbar" then
 		local fromItemData = Player.Functions.GetItemBySlot(fromSlot)
 		local fromAmount = tonumber(fromAmount) ~= nil and tonumber(fromAmount) or fromItemData.amount
-		if fromItemData ~= nil and fromItemData.amount >= fromAmount then
+		if fromItemData == nil or fromItemData.amount < fromAmount then
+			TriggerClientEvent('QBCore:Notify', src, "Je kan dit item niet verkopen..", 'error')
+			return
+		end
+		
 			if toInventory == "player" or toInventory == "hotbar" then
 				local toItemData = Player.Functions.GetItemBySlot(toSlot)
 				Player.Functions.RemoveItem(fromItemData.name, fromAmount, fromSlot)
@@ -523,7 +527,7 @@ AddEventHandler('inventory:server:SetInventoryData', function(fromInventory, toI
 					local itemInfo = QBCore.Shared.Items[fromItemData.name:lower()]
 					exports['zb-traphouses']:AddHouseItem(traphouseId, toSlot, itemInfo["name"], fromAmount, fromItemData.info, src)
 				else
-					TriggerClientEvent('QBCore:Notify', src, "Je kan dit item niet verkopen..", 'error')
+					
 				end
 			else
 				-- drop
@@ -555,9 +559,7 @@ AddEventHandler('inventory:server:SetInventoryData', function(fromInventory, toI
 					end
 				end
 			end
-		else
-			TriggerClientEvent("QBCore:Notify", src, "Je hebt dit item niet!", "error")
-		end
+		
 	elseif QBCore.Shared.SplitStr(fromInventory, "-")[1] == "otherplayer" then
 		local playerId = tonumber(QBCore.Shared.SplitStr(fromInventory, "-")[2])
 		local OtherPlayer = QBCore.Functions.GetPlayer(playerId)
