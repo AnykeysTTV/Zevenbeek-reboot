@@ -308,7 +308,7 @@ AddEventHandler("zb-meth:client:startVerkoopRonde", function()
                 TaskWanderStandard(handelNPC, 10.0, 10)
                 SetPedAsNoLongerNeeded(handelNPC)
                 if math.random(1,5) == 4 then
-                    belPolitie()
+                    belwout()
                     if math.random(1, 3) == 3 then
                         QBCore.Functions.Notify("Een persoon in de buurt heeft een melding gemaakt van de deal, snel wegwezen!", "success")
                     end
@@ -366,7 +366,7 @@ AddEventHandler("zb-meth:client:stopVerkoop", function()
     return
 end)
 
-function belPolitie()
+function belwout()
     local ped = GetPlayerPed(-1)
     local pos = GetEntityCoords(ped)
     local s1, s2 = Citizen.InvokeNative(0x2EB41072B4C1E4C0, pos.x, pos.y, pos.z, Citizen.PointerValueInt(), Citizen.PointerValueInt())
@@ -377,11 +377,11 @@ function belPolitie()
         streetLabel = streetLabel .. " " .. street2
     end
 
-    TriggerServerEvent('zb-meth:server:belPolitie', streetLabel, pos)
+    TriggerServerEvent('zb-meth:server:belwout', streetLabel, pos)
 end
 
-RegisterNetEvent('zb-meth:client:belPolitieBericht')
-AddEventHandler('zb-meth:client:belPolitieBericht', function(msg, streetLabel, coords)
+RegisterNetEvent('zb-meth:client:belwoutBericht')
+AddEventHandler('zb-meth:client:belwoutBericht', function(msg, streetLabel, coords)
     PlaySound(-1, "Lose_1st", "GTAO_FM_Events_Soundset", 0, 0, 1)
     TriggerEvent("chatMessage", "112", "error", msg)
     local transG = 250

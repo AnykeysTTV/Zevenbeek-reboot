@@ -69,7 +69,7 @@ Citizen.CreateThread(function()
                                                     QBCore.Functions.Notify('Je wapen is niet sterk genoeg!', 'error')
                                                 end
                                             else
-                                                QBCore.Functions.Notify('Er zijn geen politie agenten!', 'error')
+                                                QBCore.Functions.Notify('Er zijn geen wout agenten!', 'error')
                                             end                
                                         end)
                                     end

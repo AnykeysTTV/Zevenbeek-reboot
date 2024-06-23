@@ -16,8 +16,8 @@ AddEventHandler("zb-plofkraak:server:OntvangGeld", function(viesgeld)
     end
 end)
   
-RegisterNetEvent("zb-plofkraak:server:belPolitie")
-AddEventHandler("zb-plofkraak:server:belPolitie", function(straat, coords)
+RegisterNetEvent("zb-plofkraak:server:belwout")
+AddEventHandler("zb-plofkraak:server:belwout", function(straat, coords)
     local msg = "Mogelijke plofkraak gaande te "..straat.."."
     local alertData = {
         title = "Mogelijke plofkraak gaande",
@@ -28,7 +28,7 @@ AddEventHandler("zb-plofkraak:server:belPolitie", function(straat, coords)
         local Player = QBCore.Functions.GetPlayer(v)
         if Player ~= nil then
             if (Player.PlayerData.job.name == "police" and Player.PlayerData.job.onduty) then
-                TriggerClientEvent("zb-plofkraak:client:belPolitieBericht", Player.PlayerData.source, msg, straat, coords)
+                TriggerClientEvent("zb-plofkraak:client:belwoutBericht", Player.PlayerData.source, msg, straat, coords)
                 TriggerClientEvent("qb-phone:client:addPoliceAlert", Player.PlayerData.source, alertData)
             end
         end
@@ -64,9 +64,9 @@ QBCore.Functions.CreateCallback('zb-plofkraak:server:vraagBoorOp', function(sour
     end
 end)
 
-QBCore.Functions.CreateCallback('zb-plofkraak:server:vraagPolitieOp', function(source, cb)
-    local politie = GetCurrentCops()
-    cb(politie)
+QBCore.Functions.CreateCallback('zb-plofkraak:server:vraagwoutOp', function(source, cb)
+    local wout = GetCurrentCops()
+    cb(wout)
 end)
 
 QBCore.Functions.CreateUseableItem("stickybomb", function(source, item)

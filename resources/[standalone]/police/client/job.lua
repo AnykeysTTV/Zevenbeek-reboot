@@ -452,7 +452,7 @@ AddEventHandler('police:client:snelheidsMeting', function()
                 return
             end
         else
-            QBCore.Functions.Notify("Je bent geen politie!", "error")
+            QBCore.Functions.Notify("Je bent geen wout!", "error")
             return
         end
         if letsleep then
@@ -701,16 +701,16 @@ function removeOutfit(oData)
 end
 
 function MenuGarage(currentGarage)
-    local politieGarage = {
+    local woutGarage = {
         {
-            header = "🚓 - Politie voertuigen",
+            header = "🚓 - wout voertuigen",
             isMenuHeader = true
         } 
     }
     shouldContinue = true
     for _ , v in pairs(Config.Vehicles) do
         local vname = v.naam
-        politieGarage[#politieGarage+1] = {
+        woutGarage[#woutGarage+1] = {
             header = vname.." ",
             txt = "",
             params = {
@@ -724,7 +724,7 @@ function MenuGarage(currentGarage)
     end
 
     if shouldContinue then
-        politieGarage[#politieGarage+1] = {
+        woutGarage[#woutGarage+1] = {
             header = "⬅ Sluit Menu",
             txt = "",
             params = {
@@ -732,7 +732,7 @@ function MenuGarage(currentGarage)
             }
 
         }
-        exports['zb-menu']:openMenu(politieGarage)
+        exports['zb-menu']:openMenu(woutGarage)
     end
 end
 
@@ -743,7 +743,7 @@ end)
 function HeliGarage()
     local heliGarage = {
         {
-            header = "🚓 - Politie heli's",
+            header = "🚓 - wout heli's",
             isMenuHeader = true
         } 
     }

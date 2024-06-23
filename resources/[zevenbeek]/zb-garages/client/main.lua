@@ -481,7 +481,7 @@ function TakeOutVehicle(vehicledata)
     elseif vehicle.state == 0 then
         QBCore.Functions.Notify("Dit voertuig staat al ergens.", "error", 2500)
     elseif vehicle.state == 3 then
-        QBCore.Functions.Notify("Dit voertuig is in beslag genomen door de Politie", "error", 4000)
+        QBCore.Functions.Notify("Dit voertuig is in beslag genomen door de wout", "error", 4000)
     end
 end
 
@@ -546,7 +546,7 @@ function TakeOutGarageVehicle(vehicle)
     elseif vehicle.state == 0 then
         QBCore.Functions.Notify("Dit voertuig staat al ergens.", "error", 2500)
     elseif vehicle.state == 3 then
-        QBCore.Functions.Notify("Dit voertuig is in beslag genomen door de Politie", "error", 4000)
+        QBCore.Functions.Notify("Dit voertuig is in beslag genomen door de wout", "error", 4000)
     end
 end
 

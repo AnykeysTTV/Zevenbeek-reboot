@@ -17,9 +17,9 @@ function afsluiten() {
     $.post("https://zb-gemeentehuis/sluiten", JSON.stringify({}));
 }
 
-function openPolitie() {
+function openwout() {
     $("#kiesKnoppen").fadeOut(100);
-    $("#politieForm").delay(150).fadeIn("slow");
+    $("#woutForm").delay(150).fadeIn("slow");
     $("#terugKnop").delay(150).fadeIn("slow");
 }
 
@@ -36,7 +36,7 @@ function openAnwb() {
 }
 
 function terug() {
-    document.getElementById("politieForm").style.display = "none";
+    document.getElementById("woutForm").style.display = "none";
     document.getElementById("ambulanceForm").style.display = "none";
     document.getElementById("anwbForm").style.display = "none";
     $("#kiesKnoppen").fadeIn("slow");

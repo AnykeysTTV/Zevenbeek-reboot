@@ -1,0 +1,11 @@
+"filename", "language", "Lua", "CSS", "HTML", "JavaScript", "comment", "blank", "total"
+"c:\Users\Administrator\Desktop\server_main\server-data\resources\[fortis]\zb-customdrugs\__resource.lua", "Lua", 18, 0, 0, 0, 0, 3, 21
+"c:\Users\Administrator\Desktop\server_main\server-data\resources\[fortis]\zb-customdrugs\client\client.lua", "Lua", 201, 0, 0, 0, 14, 33, 248
+"c:\Users\Administrator\Desktop\server_main\server-data\resources\[fortis]\zb-customdrugs\config.lua", "Lua", 15, 0, 0, 0, 1, 4, 20
+"c:\Users\Administrator\Desktop\server_main\server-data\resources\[fortis]\zb-customdrugs\html\index.html", "HTML", 0, 0, 154, 0, 12, 41, 207
+"c:\Users\Administrator\Desktop\server_main\server-data\resources\[fortis]\zb-customdrugs\html\scripts\all.min.js", "JavaScript", 0, 0, 0, 1, 4, 0, 5
+"c:\Users\Administrator\Desktop\server_main\server-data\resources\[fortis]\zb-customdrugs\html\scripts\script.js", "JavaScript", 0, 0, 0, 367, 30, 74, 471
+"c:\Users\Administrator\Desktop\server_main\server-data\resources\[fortis]\zb-customdrugs\html\styles\reset.css", "CSS", 0, 42, 0, 0, 5, 1, 48
+"c:\Users\Administrator\Desktop\server_main\server-data\resources\[fortis]\zb-customdrugs\html\styles\style.css", "CSS", 0, 470, 0, 0, 16, 73, 559
+"c:\Users\Administrator\Desktop\server_main\server-data\resources\[fortis]\zb-customdrugs\server\server.lua", "Lua", 56, 0, 0, 0, 2, 14, 72
+"Total", "-", 290, 512, 154, 368, 84, 243, 1651

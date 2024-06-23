@@ -40,7 +40,7 @@ AddEventHandler('police:client:GrabShield', function()
                     end
                 end)
             else
-                QBCore.Functions.Notify("Je bent geen politie!", "error")
+                QBCore.Functions.Notify("Je bent geen wout!", "error")
             end
         end
     else

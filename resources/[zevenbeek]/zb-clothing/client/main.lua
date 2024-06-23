@@ -665,6 +665,7 @@ RegisterNUICallback('resetOutfit', function()
     previousSkinData = {}
 end)
 
+
 function resetClothing(data)
     local ped = GetPlayerPed(-1)
 
@@ -715,6 +716,7 @@ function resetClothing(data)
     SetPedComponentVariation(ped, 9, data["vest"].item, 0, 2)
     SetPedComponentVariation(ped, 9, data["vest"].item, data["vest"].texture, 0)
 
+   
     -- Torso 2
     SetPedComponentVariation(ped, 11, data["torso2"].item, 0, 2)
     SetPedComponentVariation(ped, 11, data["torso2"].item, data["torso2"].texture, 0)
@@ -774,11 +776,13 @@ function resetClothing(data)
         ClearPedProp(ped, 7)
     end
 end
-
+GetPedDrawableVariation(ped, 11)
 RegisterNUICallback('close', function()
     SetNuiFocus(false, false)
     creatingCharacter = false
     disableCam()
+
+
     
     FreezeEntityPosition(GetPlayerPed(-1), false)
 end)

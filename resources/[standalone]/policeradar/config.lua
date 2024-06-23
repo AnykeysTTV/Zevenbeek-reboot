@@ -77,9 +77,9 @@ Config.Locations = {
        [2] = {x = -439.43, y = 6009.45, z = 27.98, h = 134.5, r = 1.0},
    },        
    ["stations"] = {
-       [1] = {label = "Politiebureau Stad", coords = {x = 428.23, y = -984.28, z = 29.76, h = 3.5}},
+       [1] = {label = "woutbureau Stad", coords = {x = 428.23, y = -984.28, z = 29.76, h = 3.5}},
        [2] = {label = "Gevangenis", coords = {x = 1845.903, y = 2585.873, z = 45.672, h = 272.249}},
-       [3] = {label = "Politiebureau Paleto", coords = {x = -451.55, y = 6014.25, z = 31.716, h = 223.81}},
+       [3] = {label = "woutbureau Paleto", coords = {x = -451.55, y = 6014.25, z = 31.716, h = 223.81}},
    },
 }
 
@@ -160,13 +160,13 @@ Config.Vehicles = {
     ["pv90"] = "Volvo v90 unmarked",
     ["pvwpassat"] = "Volkswagen Passat",
     ["pvito"] = "Mercedes Vito Noodhulp",
-    ["politielandcruiser"] = "Toyota Landcruiser (Off-Road)",
+    ["woutlandcruiser"] = "Toyota Landcruiser (Off-Road)",
     ["pvw7"] = "Volkswagen Golf 7",
     ["dsix5"] = "Bmw X5 (DSI)",
     ["ptransport"] = "Mercedes-Benz Gevangene transport",
     ["pbklasseunm"] = "Mercedes-Benz Bklasse unm",
     ["kranger"] = "Ford Ranger (KMAR)",
-    ["politiemercedesbklasse2019"] = "B-klasse 2019",
+    ["woutmercedesbklasse2019"] = "B-klasse 2019",
     ["r1250rt"] = "BMW Motor",
     ["dsia6"] = "Unmarked audi",
     ["rs6avant20"] = "Audi rs6 unmarked",

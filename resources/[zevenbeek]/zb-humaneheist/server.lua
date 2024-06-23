@@ -96,8 +96,8 @@ AddEventHandler('humanelabsheist:server:heistRewards', function()
     end
 end)
 
-RegisterNetEvent("zb-humaneheist:server:belPolitie")
-AddEventHandler("zb-humaneheist:server:belPolitie", function(straat, coords)
+RegisterNetEvent("zb-humaneheist:server:belwout")
+AddEventHandler("zb-humaneheist:server:belwout", function(straat, coords)
     local msg = "Mogelijke plofkraak gaande te "..straat.."."
     local alertData = {
         title = "Mogelijke plofkraak gaande",
@@ -108,7 +108,7 @@ AddEventHandler("zb-humaneheist:server:belPolitie", function(straat, coords)
         local Player = QBCore.Functions.GetPlayer(v)
         if Player ~= nil then
             if (Player.PlayerData.job.name == "police" and Player.PlayerData.job.onduty) then
-                TriggerClientEvent("zb-humaneheist:client:belPolitieBericht", Player.PlayerData.source, msg, straat, coords)
+                TriggerClientEvent("zb-humaneheist:client:belwoutBericht", Player.PlayerData.source, msg, straat, coords)
                 TriggerClientEvent("qb-phone:client:addPoliceAlert", Player.PlayerData.source, alertData)
             end
         end

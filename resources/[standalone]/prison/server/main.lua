@@ -75,8 +75,8 @@ AddEventHandler('prison:server:SetGateHit', function(key)
     end
 end)
 
-RegisterServerEvent('prison:server:directAlarmPolitie')
-AddEventHandler('prison:server:directAlarmPolitie', function()
+RegisterServerEvent('prison:server:directAlarmwout')
+AddEventHandler('prison:server:directAlarmwout', function()
     local src = source
     for k, v in pairs(QBCore.Functions.GetPlayers()) do
         local Player = QBCore.Functions.GetPlayer(v)

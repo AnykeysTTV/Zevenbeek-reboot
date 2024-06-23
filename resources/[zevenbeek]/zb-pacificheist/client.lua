@@ -7,7 +7,7 @@ Citizen.CreateThread(function()
 	end
 end)
 
-local politie = false
+local wout = false
 
 PacificHeist = { 
     ['start'] = false,
@@ -1304,7 +1304,7 @@ end
 
 RegisterNetEvent('pacificheist:client:resetHeist')
 AddEventHandler('pacificheist:client:resetHeist', function()
-    politie = false
+    wout = false
     PacificHeist['start'] = false
     vaultLoop = false
     extendedLoop = false
@@ -1542,7 +1542,7 @@ AddEventHandler('pacificheist:client:objectSync', function(e)
     DeleteEntity(entity)
 end)
 
-function belPolitie()
+function belwout()
     local ped = GetPlayerPed(-1)
     local pos = GetEntityCoords(ped)
     local s1, s2 = Citizen.InvokeNative(0x2EB41072B4C1E4C0, pos.x, pos.y, pos.z, Citizen.PointerValueInt(), Citizen.PointerValueInt())
@@ -1552,11 +1552,11 @@ function belPolitie()
     if street2 ~= nil then 
         streetLabel = streetLabel .. " " .. street2
     end 
-    TriggerServerEvent('zb-pacificheist:server:belPolitie', streetLabel, pos)
+    TriggerServerEvent('zb-pacificheist:server:belwout', streetLabel, pos)
 end
 
-RegisterNetEvent('zb-pacificheist:client:belPolitieBericht')
-AddEventHandler('zb-pacificheist:client:belPolitieBericht', function(msg, streetLabel, coords)
+RegisterNetEvent('zb-pacificheist:client:belwoutBericht')
+AddEventHandler('zb-pacificheist:client:belwoutBericht', function(msg, streetLabel, coords)
     TriggerEvent('qb-policealerts:client:AddPoliceAlert', {
         timeOut = 5000,
         alertTitle = "Pacific Bank overval",
@@ -1606,10 +1606,10 @@ end)
 function triggerMelding(pedCo)
     local alarmDist = #(pedCo - vector3(257.67, 221.59, 106.29))
 
-    if alarmDist < 1 and not politie then
-        belPolitie()
+    if alarmDist < 1 and not wout then
+        belwout()
         TriggerServerEvent("zb-pacificheist:server:TriggerScoreboard")
-        QBCore.Functions.Notify("De bewegings sensor heeft je beweging opgepikt en de politie is op de hoogte gesteld!")
-        politie = true
+        QBCore.Functions.Notify("De bewegings sensor heeft je beweging opgepikt en de wout is op de hoogte gesteld!")
+        wout = true
     end
 end

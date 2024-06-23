@@ -15,7 +15,7 @@ Config.ComputerReward = math.random(2500, 5000)
 
  
 -- Overig 
-Config.MinimumPolitie = 5
+Config.Minimumwout = 5
 Config.AlarmTijd = 600000 -- 10 minuten
 Config.LockedIn = 120000
 Config.Timeout =  120 * (60 * 1000)

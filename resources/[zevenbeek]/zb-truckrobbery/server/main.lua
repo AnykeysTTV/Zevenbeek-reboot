@@ -33,7 +33,7 @@ if ActiveMission == 0 then
  
 		OdpalTimer()
     else
-		TriggerClientEvent('QBCore:Notify', _source, 'Er is niet genoeg politie in dienst!')
+		TriggerClientEvent('QBCore:Notify', _source, 'Er is niet genoeg wout in dienst!')
     end
 	end
 else

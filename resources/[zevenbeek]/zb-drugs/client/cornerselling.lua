@@ -285,8 +285,8 @@ function SellToPed(ped)
                         ClearPedTasksImmediately(ped)
                         table.insert(lastPed, ped)
 
-                        local politie = math.random(1,4)
-                        if politie == 1 then
+                        local wout = math.random(1,4)
+                        if wout == 1 then
                             callPolice(GetEntityCoords(GetPlayerPed(-1)))
                         end
 
@@ -302,8 +302,8 @@ function SellToPed(ped)
                         ClearPedTasksImmediately(ped)
                         table.insert(lastPed, ped)
 
-                        local politie = math.random(1,2)
-                        if politie == 1 then
+                        local wout = math.random(1,2)
+                        if wout == 1 then
                             callPolice(GetEntityCoords(GetPlayerPed(-1)))
                         end
 

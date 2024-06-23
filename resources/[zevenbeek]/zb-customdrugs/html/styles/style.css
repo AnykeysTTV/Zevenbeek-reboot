@@ -1,0 +1,1089 @@
+/*
+
+Gemaakt door: Finn#0007
+
+*/
+
+@import "reset.css";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
+
+* {
+    --wit: #FFFFFF;
+    --zwart: #000000;
+    --donker: #323232;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+body {
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif;
+}
+
+#telefoon {
+    display: none;
+}
+
+#homeknop:hover {
+    cursor: pointer;
+}
+
+.drugs-telefoon-wrapper {
+    position: fixed;
+    bottom: 10;
+    right: 10;
+    width: 229px;
+    height: 475px;
+    background-image: url("../images/frame.png");
+    background-repeat: no-repeat;
+    z-index: 999;
+}
+
+.drugs-telefoon-content {
+    margin-top: 48px;
+    margin-left: 6px;
+    background-image: url("../images/achtergrond.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 216px;
+    height: 385px;
+}
+
+/* Home scherm */
+.drugs-telefoon-home {
+    width: 100%;
+    height: 100%;
+}
+
+.drugs-telefoon-topbar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: rgba(51, 51, 51, 0.5);
+}
+
+.drugs-telefoon-topbar p {
+    font-size: .9rem;
+    padding: 5px;
+}
+
+.drugs-telefoon-home-rij {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 5px;
+}
+
+.drugs-telefoon-app img {
+    width: 45px;
+}
+
+.drugs-telefoon-app p {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: .7rem;
+    margin-top: 3px;
+    color: var(--wit);
+    max-width: 45px;
+    word-wrap: break-word;
+}
+
+.drugs-telefoon-app img:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.drugs-telefoon-bottombar {
+    margin-top: -15px;
+}
+
+.drugs-telefoon-bottombar button {
+    border: none;
+    outline: none;
+    display: block;
+    margin: auto;
+    background-color: var(--donker);
+    border-radius: 10px;
+    width: 90px;
+    padding: 10px;
+}
+
+.drugs-telefoon-app-default {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+/* Chat app */
+.chatapp-container {
+    width: 100%;
+    height: 94%;
+    background-color: var(--zwart);
+}
+
+.chatapp-topbalk {
+    width: 100%;
+    background-color: #0091FF;
+}
+
+.chatapp-topbalk h1 {
+    font-size: 1.3rem;
+    color: var(--wit);
+    text-align: center;
+    padding: 5px;
+}
+
+.chatapp-topbalk h2 {
+    font-size: 1rem;
+    color: var(--wit);
+    text-align: center;
+    padding: 5px;
+}
+
+.chatapp-topbalk h2 button {
+    outline: none;
+    border: none;
+    background: none;
+    color: var(--wit);
+    font-size: 1rem;
+}
+
+.chatapp-groepenlijst-groep {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    background-color: #252525;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.chatapp-groepenlijst-groep:hover {
+    cursor: pointer;
+}
+
+.chatapp-groepenlijst-groep h1 {
+    color: var(--wit);
+    padding: 10px;
+}
+
+.chatapp-chatbox {
+    display: none;
+    width: 100%;
+    margin: auto;
+}
+
+.chatapp-chatbox-container {
+    display: block;
+    margin: auto;
+    width: 95%;
+    height: 72%;
+    overflow-y: scroll;
+    padding: 5px;
+}
+
+.chatapp-chatbox-bericht {
+    width: 80%;
+    padding: 5px;
+    margin: 5px 0px 5px 0px;
+    border-radius: 5px;
+    word-wrap: break-word;
+}
+
+.chatapp-chatbox-bericht p {
+    line-height: 23px;
+}
+
+.chatapp-chatbox-bericht.links {
+    background-color: var(--wit);
+    float: left;
+}
+
+.chatapp-chatbox-bericht.rechts {
+    background-color: #01D048;
+    float: right;
+}
+
+.chatapp-chatbox-bericht span {
+    font-size: .8rem;
+    opacity: .5;
+    float: right;
+}
+
+.chatapp-chatbox-onderkant {
+    width: 100%;
+}
+
+.chatapp-chatbox-onderkant input[type="text"] {
+    border: none;
+    outline: none;
+    display: block;
+    margin: auto;
+    width: 95%;
+    background-color: var(--donker);
+    padding: 5px;
+    border-radius: 5px;
+    color: var(--wit);
+    font-size: .9rem;
+}
+
+.chatapp-chatbox-onderkant input[type="text"]:disabled {
+    opacity: 0.5;
+    background-color: rgba(255, 0, 0, 0.5);
+}
+
+/* Crypto app */
+.chatapp-container {
+    width: 100%;
+    height: 94%;
+    background-color: var(--zwart);
+}
+
+.cryptoapp-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 20%;
+    background-color: #00d4ff;
+}
+
+.cryptoapp-header h1 {
+    font-size: 1.5rem;
+    color: var(--wit);
+    font-weight: bold;
+}
+
+.cryptoapp-header h2 {
+    font-size: 1.2rem;
+    color: var(--wit);
+    margin-top: 5px;
+}
+
+.cryptoapp-header h2 #cryptoAppEuro {
+    font-style: italic;
+    opacity: .7;
+}
+
+.cryptoapp-content {
+    width: 100%;
+    height: 74%;
+    background-color: var(--wit);
+}
+
+.cryptoapp-content button {
+    outline: none;
+    border: none;
+    display: block;
+    margin: auto;
+    background-color: #CCCCCC;
+    border-radius: 5px;
+    padding: 10px;
+    width: 90%;
+    margin-bottom: 10px;
+}
+
+/* Taken app */
+.takenapp-container {
+    width: 100%;
+    height: 94%;
+    background-color: var(--zwart);
+}
+
+.takenapp-top {
+    width: 100%;
+    background-color: #262626;
+    padding: 5px 0px 10px 0px;
+}
+
+.takenapp-top p {
+    text-align: center;
+    font-size: .9rem;
+    margin-top: 10px;
+    color: var(--wit);
+}
+
+#takenapp-status {
+    color: red;
+    font-weight: bold;
+}
+
+.takenapp-takenlijst {
+    overflow-y: scroll;
+    height: 250px;
+}
+
+.takenapp-takenlijst-taak {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #23272A;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.takenapp-takenlijst-taak p {
+    color: var(--wit);
+}
+
+.takenapp-takenlijst-taak button {
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.5rem;
+    color: var(--wit);
+}
+
+.takenapp-top input[type=checkbox] {
+    /* Begin toggle knop */
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+.takenapp-top label {
+    margin: auto;
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 100px;
+    height: 50px;
+    background: grey;
+    display: block;
+    border-radius: 100px;
+    position: relative;
+}
+
+.takenapp-top label:after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border-radius: 90px;
+    transition: 0.3s;
+}
+
+.takenapp-top input:checked+label {
+    background: #bada55;
+}
+
+.takenapp-top input:checked+label:after {
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+}
+
+.takenapp-top label:active:after {
+    /* Eind toggle knop */
+    width: 50px;
+}
+
+/* Twitter */
+.twitterapp-container {
+    width: 100%;
+    height: 94%;
+}
+
+.twitterapp-top {
+    width: 100%;
+    padding: 10px 0px 10px 0px;
+    background-color: #00acee;
+}
+
+.twitterapp-top h1 {
+    font-size: 1.3rem;
+    text-align: center;
+    font-weight: bold;
+    color: var(--wit);
+}
+
+.twitterapp-content {
+    width: 100%;
+    height: 320px;
+    background-color: var(--wit);
+}
+
+.twitterapp-content textarea {
+    outline: none;
+    border: none;
+    resize: none;
+    border: 1px solid #ccc;
+    background-color: #E9E9E9;
+    padding: 5px;
+    width: 90%;
+    margin: auto;
+    display: block;
+    border-radius: 5px;
+    line-height: 10px;
+}
+
+.twitterapp-content button {
+    border: none;
+    outline: none;
+    width: 90%;
+    padding: 5px;
+    background-color: #00acee;
+    border-radius: 3px;
+    margin: auto;
+    display: block;
+    margin-top: 5px;
+    color: var(--wit);
+    font-size: 1.1rem;
+}
+
+.twitterapp-content button:hover {
+    cursor: pointer;
+}
+
+.twitterapp-container p {
+    text-align: center;
+    padding: 5px;
+    margin-top: 5px;
+    font-size: 0.9rem;
+    line-height: 15px;
+}
+
+.twitterapp-container p span {
+    font-weight: bold;
+}
+
+
+/* Labs app */
+.labapp-container {
+    width: 100%;
+    height: 94%;
+    background-color: var(--zwart);
+}
+
+.labapp-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+.labapp-content {
+    margin: 10px 0px 10px 0px;
+    width: 94%;
+    background-color: var(--donker);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.labapp-content img {
+    width: 100%;
+    margin: auto;
+    display: block;
+}
+
+.labapp-content h1 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--wit);
+    padding: 5px;
+
+}
+
+.labapp-content p {
+    font-size: 1rem;
+    color: var(--wit);
+    padding: 5px;
+    line-height: 20px;
+}
+
+.labapp-content p .kruis {
+    color: #FF0000;
+}
+
+.labapp-content p .vink {
+    color: #33FF99;
+}
+
+.labapp-content button {
+    outline: none;
+    border: none;
+    background-color: #33FF99;
+    width: 100%;
+    font-size: 1rem;
+    padding: 8px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-top: 10px;
+}
+
+.labapp-content button:hover {
+    cursor: pointer;
+}
+
+.labapp-content button[disabled] {
+    background-color: #FF0000 !important;
+    color: var(--wit) !important;
+}
+
+/* Notificaties */
+
+.drugs-telefoon-notificatie {
+    display: none;
+    position: fixed;
+    width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #a0da55;
+    right: 0;
+    bottom: 0;
+    margin: 20px;
+}
+
+.drugs-telefoon-notificatie h1 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.drugs-telefoon-notificatie p {
+    font-size: 1rem;
+}
+
+/* Bitcoin atm */
+.bitcoinatm-main {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.bitcoinatm-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bitcoinatm-machine {
+    width: 900px;
+    height: 500px;
+    border-radius: 5px;
+    background-color: var(--wit);
+}
+
+.bitcoinatm-top {
+    width: 100%;
+    background-color: #214497;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.bitcoinatm-top img {
+    margin: auto;
+    display: block;
+    width: 200px;
+    padding: 20px;
+}
+
+.bitcoinatm-content h1 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    margin: 20px 0px 20px 0px;
+}
+
+.bitcoinatm-saldo {
+    margin: auto;
+    display: block;
+    background-color: var(--wit);
+    box-shadow: 10px 10px 10px 10px rgb(0 0 0 / 20%);
+    width: 300px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.bitcoinatm-saldo h2 {
+    font-size: 1.3rem;
+    text-align: center;
+    line-height: 25px;
+}
+
+.bitcoinatm-knoppen {
+    width: 100%;
+    margin-top: 50px;
+}
+
+.bitcoinatm-knoppen input[type="number"] {
+    border: none;
+    outline: none;
+    margin: auto;
+    display: block;
+    width: 750px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.bitcoinatm-knoppen button {
+    border: none;
+    outline: none;
+    margin: auto;
+    display: block;
+    width: 750px;
+    background-color: #214497;
+    color: var(--wit);
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.bitcoinatm-fout {
+    display: none;
+    margin: auto;
+    width: 750px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #df5163;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.bitcoinatm-fout p {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--wit);
+}
+
+.bitcoinatm-goed {
+    display: none;
+    margin: auto;
+    width: 750px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #A4DC85;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.bitcoinatm-goed p {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--wit);
+}
+
+/* Lab laptop dinges */
+#lab-laptop {
+    display: none;
+}
+
+.lab-laptop-main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lab-laptop-wrapper {
+    width: 80%;
+    height: 80%;
+    border: 30px solid var(--zwart);
+    background-color: var(--donker);
+    border-radius: 10px;
+}
+
+.lab-laptop-container {
+    width: 100%;
+    height: 100%;
+}
+
+.lab-laptop-top {
+    width: 80%;
+    position: fixed;
+    background-color: #282828;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lab-laptop-top h1 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--wit);
+    padding: 15px;
+}
+
+.lab-laptop-center {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.lab-laptop-chatveld {
+    margin-top: 8%;
+    width: 90%;
+    height: 80%;
+    background-color: #282828;
+    border-radius: 10px;
+    overflow-y: scroll;
+}
+
+.lab-laptop-chatveld-links {
+    float: left;
+    width: 50%;
+    background-color: #82C91E;
+    margin: 5px;
+    padding: 8px;
+    border-radius: 5px;
+    word-wrap: break-word;
+}
+
+.lab-laptop-chatveld-rechts {
+    float: right;
+    width: 50%;
+    background-color: #E5E4EA;
+    margin: 5px;
+    padding: 8px;
+    border-radius: 5px;
+    word-wrap: break-word;
+}
+
+.lab-laptop-center button {
+    outline: none;
+    border: none;
+    width: 80%;
+    padding: 5px;
+    border-radius: 2px;
+    background-color: #82C91E;
+    font-size: 1.1rem;
+    margin: 5px;
+}
+
+/* Handel app */
+
+.handel-top {
+    width: 100%;
+    background-color: #262626;
+    padding: 10px 0px 10px 0px;
+}
+
+.handel-top h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: var(--wit);
+}
+
+.handel-content {
+    background-color: var(--zwart);
+    height: 316px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.handel-koperkaart {
+    width: 95%;
+    border-radius: 5px;
+    background-color: var(--donker);
+}
+
+.handel-koperkaart img {
+    width: 100px;
+    margin: auto;
+    display: block;
+    padding: 5px;
+}
+
+.handel-koperkaart h1 {
+    font-size: 1.1rem;
+    color: var(--wit);
+    text-transform: uppercase;
+    font-weight: bolder;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+.handel-koperkaart p {
+    font-size: 1rem;
+    color: var(--wit);
+    padding: 5px;
+}
+
+.handel-koperkaart p span.bold {
+    font-weight: bold;
+}
+
+.handel-koperkaart-knoppen {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.handel-koperkaart-knoppen button {
+    outline: none;
+    border: none;
+    padding: 5px;
+    font-size: 1.3rem;
+    width: 50%;
+    color: var(--wit);
+}
+
+.handel-koperkaart-knoppen button:disabled,button[disabled] {
+    opacity: 0.5;
+}
+
+.handel-koperkaart-knoppen button.links {
+    border-bottom-left-radius: 5px;
+    background-color: #1fb141;
+}
+
+.handel-koperkaart-knoppen button.links:hover {
+    cursor: pointer;
+}
+
+.handel-koperkaart-knoppen button.rechts {
+    border-bottom-right-radius: 5px;
+    background-color: red;
+}
+
+.handel-koperkaart-knoppen button.rechts:hover {
+    cursor: pointer;
+}
+
+
+
+.handel-zoeken {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.handel-zoeken p {
+    color: var(--wit);
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 30px;
+}
+
+#zoeken span {
+    display: inline-block;
+    width: 5px;
+    height: 20px;
+    background-color: #3498db;
+}
+
+#zoeken span:nth-child(1) {
+    animation: grow 1s ease-in-out infinite;
+}
+
+#zoeken span:nth-child(2) {
+    animation: grow 1s ease-in-out 0.15s infinite;
+}
+
+#zoeken span:nth-child(3) {
+    animation: grow 1s ease-in-out 0.30s infinite;
+}
+
+#zoeken span:nth-child(4) {
+    animation: grow 1s ease-in-out 0.45s infinite;
+}
+
+.locaties-content {
+    display: flex;
+    background-color: var(--zwart);
+    height: 360px;
+    align-items: center;
+    flex-direction: column;
+}
+
+.locaties-text {
+    color: var(--wit);
+    width: 196px;
+    text-align: center;
+    background-color: var(--donker);
+    padding: 10px;
+    margin-bottom: 50px;
+    line-height: 18px;
+}
+
+.locatieapp-button {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.locatieapp-button button {
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #20483E;
+    width: 100px;
+    color: white;
+    padding: 10px;
+}
+.locaties-content button:hover {
+    cursor: pointer;
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
+}
+
+.locatieapp-button.biggie button {
+    margin-top: 8px;
+    width: 208px!important;
+}
+
+/* Blackmarket chat app  */
+
+#bmchat-app-icon {
+    display: none;
+}
+
+.bmchat-container {
+    width: 100%;
+    height: 94%;
+    background-color: var(--zwart);
+}
+
+.bmchat-topbalk {
+    width: 100%;
+    background-color: var(--donker);
+}
+
+.bmchat-topbalk h1 {
+    font-size: 1.3rem;
+    color: var(--wit);
+    text-align: center;
+    padding: 5px;
+}
+
+.bmchat-chatbox {
+    display: block;
+    width: 100%;
+    margin: auto;
+}
+
+.bmchat-chatbox-container {
+    display: block;
+    margin: auto;
+    width: 95%;
+    height: 72%;
+    overflow-y: scroll;
+    padding: 5px;
+}
+
+.bmchat-chatbox-bericht {
+    width: 80%;
+    padding: 5px;
+    margin: 5px 0px 5px 0px;
+    border-radius: 5px;
+    word-wrap: break-word;
+}
+
+.bmchat-chatbox-bericht p {
+    line-height: 23px;
+}
+
+.bmchat-chatbox-bericht.links {
+    background-color: var(--wit);
+    float: left;
+}
+
+.bmchat-chatbox-bericht.rechts {
+    background-color: #9b9b9b;
+    float: right;
+}
+
+.bmchat-chatbox-bericht span {
+    font-size: .8rem;
+    opacity: .5;
+    float: right;
+}
+
+.bmchat-chatbox-onderkant {
+    width: 100%;
+}
+
+.bmchat-chatbox-onderkant input[type="text"] {
+    border: none;
+    outline: none;
+    display: block;
+    margin: auto;
+    width: 95%;
+    background-color: var(--donker);
+    padding: 5px;
+    border-radius: 5px;
+    color: var(--wit);
+    font-size: .9rem;
+}
+
+.bmchat-chatbox-onderkant input[type="text"]:disabled {
+    opacity: 0.5;
+    background-color: rgba(255, 0, 0, 0.5);
+}
+
+
+
+
+
+
+
+
+
+@keyframes grow {
+
+    0%,
+    100% {
+        -webkit-transform: scaleY(1);
+        -ms-transform: scaleY(1);
+        -o-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+
+    50% {
+        -webkit-transform: scaleY(1.8);
+        -ms-transform: scaleY(1.8);
+        -o-transform: scaleY(1.8);
+        transform: scaleY(1.8);
+    }
+}

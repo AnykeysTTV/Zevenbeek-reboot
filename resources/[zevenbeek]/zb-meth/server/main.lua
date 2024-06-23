@@ -94,8 +94,8 @@ AddEventHandler("zb-meth:server:verkoopalles", function()
     TriggerClientEvent("QBCore:Notify", src, "Bedankt, ik heb je $"..prijs.." cash gegeven ervoor", "success")
 end)
 
-RegisterNetEvent("zb-meth:server:belPolitie")
-AddEventHandler("zb-meth:server:belPolitie", function(straat, coords)
+RegisterNetEvent("zb-meth:server:belwout")
+AddEventHandler("zb-meth:server:belwout", function(straat, coords)
     local msg = "Verdachte situatie te "..straat.."."
     local alertData = {
         title = "Verdachte Situatie",
@@ -106,7 +106,7 @@ AddEventHandler("zb-meth:server:belPolitie", function(straat, coords)
         local Player = QBCore.Functions.GetPlayer(v)
         if Player ~= nil then
             if (Player.PlayerData.job.name == "police" and Player.PlayerData.job.onduty) then
-                TriggerClientEvent("zb-meth:client:belPolitieBericht", Player.PlayerData.source, msg, straat, coords)
+                TriggerClientEvent("zb-meth:client:belwoutBericht", Player.PlayerData.source, msg, straat, coords)
                 TriggerClientEvent("qb-phone:client:addPoliceAlert", Player.PlayerData.source, alertData)
             end
         end

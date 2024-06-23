@@ -90,7 +90,7 @@ Citizen.CreateThread(function()
                                     QBCore.Functions.Notify("Je mes is te bot, probeer het nog eens!", "error", 1000)
                                     SetVehicleAlarm(voertuig, true)
                                     SetVehicleAlarmTimeLeft(voertuig, 5000)
-                                    belPolitie()
+                                    belwout()
                                 end
                                 ClearPedTasksImmediately(PlayerPedId())
                             end)
@@ -109,7 +109,7 @@ Citizen.CreateThread(function()
     end
 end)
 
-function belPolitie()
+function belwout()
     local ped = GetPlayerPed(-1)
     local pos = GetEntityCoords(ped)
     local s1, s2 = Citizen.InvokeNative(0x2EB41072B4C1E4C0, pos.x, pos.y, pos.z, Citizen.PointerValueInt(), Citizen.PointerValueInt())
@@ -120,11 +120,11 @@ function belPolitie()
         streetLabel = streetLabel .. " " .. street2
     end
 
-    TriggerServerEvent('zb-smallresources:server:belPolitie', streetLabel, pos)
+    TriggerServerEvent('zb-smallresources:server:belwout', streetLabel, pos)
 end
 
-RegisterNetEvent('zb-smallresources:client:belPolitieBericht')
-AddEventHandler('zb-smallresources:client:belPolitieBericht', function(msg, streetLabel, coords)
+RegisterNetEvent('zb-smallresources:client:belwoutBericht')
+AddEventHandler('zb-smallresources:client:belwoutBericht', function(msg, streetLabel, coords)
     PlaySound(-1, "Lose_1st", "GTAO_FM_Events_Soundset", 0, 0, 1)
     TriggerEvent("chatMessage", "112", "error", msg)
     local transG = 250

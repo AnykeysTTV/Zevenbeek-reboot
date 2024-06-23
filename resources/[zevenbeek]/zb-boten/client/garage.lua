@@ -20,7 +20,7 @@ AddEventHandler('QBCore:Client:OnJobUpdate', function(JobInfo)
         SetBlipColour(PoliceBlip, 29)
 
         BeginTextCommandSetBlipName("STRING")
-        AddTextComponentSubstringPlayerName("Politiehaven")
+        AddTextComponentSubstringPlayerName("wouthaven")
         EndTextCommandSetBlipName(PoliceBlip)
 
         if PoliceBlip2 ~= nil then
@@ -34,7 +34,7 @@ AddEventHandler('QBCore:Client:OnJobUpdate', function(JobInfo)
         SetBlipColour(PoliceBlip2, 29)
 
         BeginTextCommandSetBlipName("STRING")
-        AddTextComponentSubstringPlayerName("Politiehaven")
+        AddTextComponentSubstringPlayerName("wouthaven")
         EndTextCommandSetBlipName(PoliceBlip2)
     elseif PlayerJob.name == "ambulance" then
         if AmbulanceBlip ~= nil then
@@ -77,7 +77,7 @@ Citizen.CreateThread(function()
                 if dist < 10 then
                     DrawMarker(2, QBBoatshop.PoliceBoat.x, QBBoatshop.PoliceBoat.y, QBBoatshop.PoliceBoat.z, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.3, 0.2, 0.15, 200, 0, 0, 222, false, false, false, true, false, false, false)
                     if (GetDistanceBetweenCoords(pos.x, pos.y, pos.z, QBBoatshop.PoliceBoat.x, QBBoatshop.PoliceBoat.y, QBBoatshop.PoliceBoat.z, true) < 1.5) then
-                        QBCore.Functions.DrawText3D(QBBoatshop.PoliceBoat.x, QBBoatshop.PoliceBoat.y, QBBoatshop.PoliceBoat.z, "~g~E~w~ - Politie Haven")
+                        QBCore.Functions.DrawText3D(QBBoatshop.PoliceBoat.x, QBBoatshop.PoliceBoat.y, QBBoatshop.PoliceBoat.z, "~g~E~w~ - wout Haven")
                         if IsControlJustReleased(0, Keys["E"]) then
                             local coords = QBBoatshop.PoliceBoatSpawn
                             QBCore.Functions.SpawnVehicle("pboot", function(veh)
@@ -131,7 +131,7 @@ Citizen.CreateThread(function()
                 if dist < 10 then
                     DrawMarker(2, QBBoatshop.PoliceBoat2.x, QBBoatshop.PoliceBoat2.y, QBBoatshop.PoliceBoat2.z, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.3, 0.2, 0.15, 200, 0, 0, 222, false, false, false, true, false, false, false)
                     if (GetDistanceBetweenCoords(pos.x, pos.y, pos.z, QBBoatshop.PoliceBoat2.x, QBBoatshop.PoliceBoat2.y, QBBoatshop.PoliceBoat2.z, true) < 1.5) then
-                        QBCore.Functions.DrawText3D(QBBoatshop.PoliceBoat2.x, QBBoatshop.PoliceBoat2.y, QBBoatshop.PoliceBoat2.z, "~g~E~w~ - Politie Haven")
+                        QBCore.Functions.DrawText3D(QBBoatshop.PoliceBoat2.x, QBBoatshop.PoliceBoat2.y, QBBoatshop.PoliceBoat2.z, "~g~E~w~ - wout Haven")
                         if IsControlJustReleased(0, Keys["E"]) then
                             local coords = QBBoatshop.PoliceBoatSpawn2
                             QBCore.Functions.SpawnVehicle("pboot", function(veh)

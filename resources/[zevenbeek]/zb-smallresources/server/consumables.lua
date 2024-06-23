@@ -260,7 +260,7 @@ QBCore.Functions.CreateUseableItem("dronehesje", function(source, item)
     TriggerClientEvent("consumables:client:UseDroneHesje", source)
 end)
 
-QBCore.Functions.CreateUseableItem("politieschild", function(source, item)
+QBCore.Functions.CreateUseableItem("woutschild", function(source, item)
     local Player = QBCore.Functions.GetPlayer(source)
     TriggerClientEvent("police:client:GrabShield", source)
 end)

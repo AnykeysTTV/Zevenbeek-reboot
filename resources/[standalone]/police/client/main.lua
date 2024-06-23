@@ -116,7 +116,7 @@ Citizen.CreateThread(function()
 end)
 
 AddEventHandler("police:client:meldSpotting", function()
-    QBCore.Functions.Notify("Je bent gespot met de heli rond de gevangenis! De politie is op de hoogte!", "error")
+    QBCore.Functions.Notify("Je bent gespot met de heli rond de gevangenis! De wout is op de hoogte!", "error")
 end)
 
 RegisterNetEvent("police:client:ontvangHeliMelding")
@@ -241,7 +241,7 @@ AddEventHandler('police:client:sendBillingMail', function(amount)
         TriggerServerEvent('qb-phone:server:sendNewMail', {
             sender = "Central Justitieel Incassobureau",
             subject = "Openbaar Ministerie",
-            message = "Beste " .. gender .. " " .. charinfo.lastname .. ",<br /><br />Het centraal justitieel incasso bureau (CJIB) heeft de boetes verstekt van de politie.<br />Er is <strong>€"..amount.."</strong> van je bankrekening afgeschreven.<br /><br />Met vriendelijke groet,<br />Centraal Justitieel Incassobureau",
+            message = "Beste " .. gender .. " " .. charinfo.lastname .. ",<br /><br />Het centraal justitieel incasso bureau (CJIB) heeft de boetes verstekt van de wout.<br />Er is <strong>€"..amount.."</strong> van je bankrekening afgeschreven.<br /><br />Met vriendelijke groet,<br />Centraal Justitieel Incassobureau",
             button = {}
         })
     end)

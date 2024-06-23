@@ -167,7 +167,7 @@ TriggerEvent('animations:client:EmoteCommandStart', {"adjusttie"}) -- Animatie V
         if PlayerData.charinfo.gender == "man" then
             currentVest = GetPedDrawableVariation(ped, 10)
             currentVestTexture = GetPedTextureVariation(ped, 10)
-            SetPedComponentVariation(ped, 10, 44, 0, 2) -- Zwaar Politie Vest
+            SetPedComponentVariation(ped, 10, 44, 0, 2) -- Zwaar wout Vest
         else
             currentVest = GetPedDrawableVariation(ped, 30)
             currentVestTexture = GetPedTextureVariation(ped, 30)

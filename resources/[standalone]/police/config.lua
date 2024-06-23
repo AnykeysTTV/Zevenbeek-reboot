@@ -88,10 +88,10 @@ Config.Locations = {
         [2] = {x = -439.43, y = 6009.45, z = 27.98, h = 134.5, r = 1.0},
     },        
    ["stations"] = {
-       [1] = {label = "Politiebureau Stad", coords = {x = 428.23, y = -984.28, z = 29.76, h = 3.5}},
+       [1] = {label = "woutbureau Stad", coords = {x = 428.23, y = -984.28, z = 29.76, h = 3.5}},
        [2] = {type = 252, color = 62, label = "Gevangenis", coords = {x = 1845.903, y = 2585.873, z = 45.672, h = 272.249}},
-       [3] = {label = "Politiebureau Paleto", coords = {x = -451.55, y = 6014.25, z = 31.716, h = 223.81}},
-       [4] = {label = "Politiebureau Sandy", coords = {x = 1853.69, y = 3686.86, z = 34.26}}, -- Sandy
+       [3] = {label = "woutbureau Paleto", coords = {x = -451.55, y = 6014.25, z = 31.716, h = 223.81}},
+       [4] = {label = "woutbureau Sandy", coords = {x = 1853.69, y = 3686.86, z = 34.26}}, -- Sandy
    },
 }
 
@@ -104,7 +104,7 @@ Config.ArmoryWhitelist = {
 }
 
 Config.Helicopter = {
-    [1] = {naam = "Politie Eurocopter", spawn = "pzulu"},
+    [1] = {naam = "wout Eurocopter", spawn = "pzulu"},
     [2] = {naam = "Westland Augusta", spawn = "paugusta"},
 }
 
@@ -165,12 +165,12 @@ Config.Vehicles = {
     [14] = {naam = "Bmw X5 (DSI)", spawn = "dsix5"},
     [15] = {naam = "Volkswagen Passat", spawn = "pvwpassat"},
     [16] = {naam = "Mercedes Vito Noodhulp", spawn = "pvito"},
-    [17] = {naam = "Toyota Lancruiser (Off-road)", spawn = "politielandcruiser"},
+    [17] = {naam = "Toyota Lancruiser (Off-road)", spawn = "woutlandcruiser"},
     [18] = {naam = "Volkswagen Golf 7", spawn = "pvw7"},
     [19] = {naam = "Ford Ranger (KMAR)", spawn = "kranger"},
-    [20] = {naam = "Mercedes B-Klasse 2019", spawn = "PolitieMercedesBKlasse2019"},
+    [20] = {naam = "Mercedes B-Klasse 2019", spawn = "woutMercedesBKlasse2019"},
     [21] = {naam = "Unmarked Alfa Romeo Giulia", spawn = "palfa"},
-    [22] = {naam = "Politie Berger", spawn = "pberger"},
+    [22] = {naam = "wout Berger", spawn = "pberger"},
     [23] = {naam = "Range Rover Vogues BOT (DSI)", spawn = "rrbot"},
     [24] = {naam = "Audi A6 (DSI)", spawn = "dsia6"},
     [25] = {naam = "Audi Q7 (DSI)", spawn = "dsiaudi"},
@@ -456,7 +456,7 @@ Config.Items = {
             slot = 21,
         },
         [22] = {
-            name = "politieschild",
+            name = "woutschild",
             price = 0,
             amount = 10,
             info = {},

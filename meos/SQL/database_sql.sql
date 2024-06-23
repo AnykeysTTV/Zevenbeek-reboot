@@ -41,7 +41,7 @@ CREATE TABLE `laws` (
 
 INSERT INTO `laws` (`id`, `name`, `description`, `fine`, `months`) VALUES
 (27, 'R602 - Het negeren van een roodverkeerlicht', 'Niet stoppen bij rood verkeerslicht, ', 350, 0),
-(28, 'R628b - Niet opvolgen stopteken politie', 'Het negeren stop teken, Bij verkeers controle en bij vordering ', 1000, 0),
+(28, 'R628b - Niet opvolgen stopteken wout', 'Het negeren stop teken, Bij verkeers controle en bij vordering ', 1000, 0),
 (29, 'D505 - Baldadigheid', 'Op de openbare weg of op een voor publiek toegankelijke plaats tegen goederen of personen baldadigheid plegen\r\nstraatschenderij; waaruit bleek dit; feitelijke baldadigheid beschrijven.', 830, 0),
 (30, 'F116a - Inbrekerswerktuig', 'Het is verboden op de weg of in de nabijheid van winkels te vervoeren of bij zich te hebben een voorwerp dat er kennelijk toe is uitgerust om het plegen van (winkel)diefstal te vergemakkelijken', 500, 0),
 (31, 'D517 - Identiteitsbewijs', 'Niet voldoen aan de verplichting om een identiteitsbewijs ter inzage aan te bieden feiten en omstandigheden vermelden waarom vordering redelijkerwijze noodzakelijk werd geacht.', 750, 0),
@@ -66,7 +66,7 @@ INSERT INTO `laws` (`id`, `name`, `description`, `fine`, `months`) VALUES
 (53, 'Artikel 5 - Wegenverkeerswet', 'Het is een ieder verboden zich zodanig te gedragen dat gevaar op de weg wordt veroorzaakt of kan worden veroorzaakt of dat het verkeer op de weg wordt gehinderd of kan worden gehinderd. 3 maanden voorwaardelijk', 4500, 0),
 (55, 'Artikel 184 - Niet voldoen aan een bevel of vordering', 'Hij die opzettelijk niet voldoet aan een bevel of een vordering, krachtens wettelijk voorschrift gedaan door een ambtenaar met de uitoefening van enig toezicht belast of door een ambtenaar belast met of bevoegd verklaard tot het opsporen of onderzoeken van strafbare feiten, alsmede hij die opzettelijk enige handeling, door een van die ambtenaren ondernomen ter uitvoering van enig wettelijk voorschrift, belet, belemmert of verijdelt.', 4350, 5),
 (57, 'Artikel 426ter - Belemmeren hulpverlener', 'Hij die wederrechtelijk een hulpverlener gedurende de uitoefening van zijn beroep in zijn vrijheid van beweging belemmert of met een of meer anderen zich aan hem tegen zijn uitdrukkelijk verklaarde wil blijft opdringen of hem op hinderlijke wijze blijft volgen wordt gestraft met hechtenis van ten hoogste drie maanden of geldboete van de derde categorie.', 8700, 18),
-(58, 'Artikel 196 - Onrechtmatig voordoen als politie ambt.', 'Hij die in het openbaar kledingstukken of opzichtige onderscheidingstekens draagt of voert, welke uitdrukking zijn van een bepaald staatkundig streven, wordt gestraft met hechtenis van ten hoogste twaalf dagen of geldboete van de tweede categorie.', 4500, 15),
+(58, 'Artikel 196 - Onrechtmatig voordoen als wout ambt.', 'Hij die in het openbaar kledingstukken of opzichtige onderscheidingstekens draagt of voert, welke uitdrukking zijn van een bepaald staatkundig streven, wordt gestraft met hechtenis van ten hoogste twaalf dagen of geldboete van de tweede categorie.', 4500, 15),
 (59, 'Artikel 142 - Misbruik noodnummer', 'Valse meldingen maken - onnodig gebruik maken van 112 nummer', 7500, 10),
 (60, 'Artikel 48 - Medeplichtigen mishandeling', 'Vechten, na aangifte kan straf gegeven worden', 1250, 5),
 (61, 'Artikel 26 - WWM CAT. II&III', 'Vuur handwapens & Munitie', 5000, 12),

@@ -84,7 +84,7 @@ Strings = {
     ['take_blip'] = 'Pak de chemicaliën',
     ['put_blip'] = 'Plaats de chemicaliën',
     ['police_alert'] = 'Humane Labs. Overval alert! Check je gps!',
-    ['need_police'] = 'Niet genoeg politie aanwezig!',
+    ['need_police'] = 'Niet genoeg wout aanwezig!',
     ['minigame_info'] = '~INPUT_WEAPON_WHEEL_PREV~ Omhoog ~INPUT_WEAPON_WHEEL_NEXT~ Naar benenden ~INPUT_ATTACK~ Links ~INPUT_AIM~ Rechts'
 } 
 

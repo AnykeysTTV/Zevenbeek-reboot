@@ -256,13 +256,13 @@ RegisterCommand('finishPacific', function(source, args)
                 start = false
             end
         else
-            TriggerClientEvent('QBCore:Notify', src, "Je bent geen in dienst politie!", "error")
+            TriggerClientEvent('QBCore:Notify', src, "Je bent geen in dienst wout!", "error")
         end
     end
 end)
 
-RegisterNetEvent("zb-pacificheist:server:belPolitie")
-AddEventHandler("zb-pacificheist:server:belPolitie", function(straat, coords)
+RegisterNetEvent("zb-pacificheist:server:belwout")
+AddEventHandler("zb-pacificheist:server:belwout", function(straat, coords)
     local msg = "Pacific bank overal"
     local alertData = {
         title = "Pacific bank overal",
@@ -273,7 +273,7 @@ AddEventHandler("zb-pacificheist:server:belPolitie", function(straat, coords)
         local Player = QBCore.Functions.GetPlayer(v)
         if Player ~= nil then
             if (Player.PlayerData.job.name == "police" and Player.PlayerData.job.onduty) then
-                TriggerClientEvent("zb-pacificheist:client:belPolitieBericht", Player.PlayerData.source, msg, straat, coords)
+                TriggerClientEvent("zb-pacificheist:client:belwoutBericht", Player.PlayerData.source, msg, straat, coords)
                 TriggerClientEvent("qb-phone:client:addPoliceAlert", Player.PlayerData.source, alertData)
             end
         end

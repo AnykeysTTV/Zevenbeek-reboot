@@ -58,7 +58,7 @@ function StartTrainHeist()
                     SpawnGuards()
                     SetupTrain()
                     TriggerServerEvent('trainheist:server:trainLoop')
-                    belPolitie()
+                    belwout()
                     -- TriggerServerEvent('trainheist:server:policeAlert', Config['TrainHeist']['setupTrain']['pos'])
                 end
             end)
@@ -564,8 +564,8 @@ AddEventHandler('onResourceStop', function (resource)
     end
 end)
 
-RegisterNetEvent('zb-trainheist:client:belPolitieBericht')
-AddEventHandler('zb-trainheist:client:belPolitieBericht', function(msg, streetLabel, coords)
+RegisterNetEvent('zb-trainheist:client:belwoutBericht')
+AddEventHandler('zb-trainheist:client:belwoutBericht', function(msg, streetLabel, coords)
     TriggerEvent('qb-policealerts:client:AddPoliceAlert', {
         timeOut = 5000,
         alertTitle = "Merryweather trein overval",
@@ -608,7 +608,7 @@ AddEventHandler('zb-trainheist:client:belPolitieBericht', function(msg, streetLa
     end
 end)
 
-function belPolitie()
+function belwout()
     local ped = GetPlayerPed(-1)
     local pos = GetEntityCoords(ped)
     local s1, s2 = Citizen.InvokeNative(0x2EB41072B4C1E4C0, pos.x, pos.y, pos.z, Citizen.PointerValueInt(), Citizen.PointerValueInt())
@@ -618,5 +618,5 @@ function belPolitie()
     if street2 ~= nil then 
         streetLabel = streetLabel .. " " .. street2
     end
-    TriggerServerEvent('zb-trainheist:server:belPolitie', streetLabel, pos)
+    TriggerServerEvent('zb-trainheist:server:belwout', streetLabel, pos)
 end

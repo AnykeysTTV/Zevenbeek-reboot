@@ -71,7 +71,7 @@ Strings = {
     ['need_this'] = 'Je hebt het volgende nodig: ',
     ['deliver_to_buyer'] = 'Breng de spullen naar de koper, check je gps',
     ['buyer_blip'] = 'Koper',
-    ['need_police'] = 'Niet genoeg politie aanwezig.',
+    ['need_police'] = 'Niet genoeg wout aanwezig.',
     ['total_money'] = 'Je hebt dit: ',
     -- ['police_alert'] = 'Train robbery alert! Check your gps.',
 }

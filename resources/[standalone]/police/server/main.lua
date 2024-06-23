@@ -701,7 +701,7 @@ QBCore.Functions.CreateCallback('police:GetCops', function(source, cb)
 	cb(amount)
 end)
 
-QBCore.Commands.Add("setpolice", "Maakt iemand een politiemedewerker.", {{name="id", help="ID"}}, true, function(source, args)
+QBCore.Commands.Add("setpolice", "Maakt iemand een woutmedewerker.", {{name="id", help="ID"}}, true, function(source, args)
     local Player = QBCore.Functions.GetPlayer(tonumber(args[1]))
     local Myself = QBCore.Functions.GetPlayer(source)
     if Player ~= nil then 
@@ -721,7 +721,7 @@ QBCore.Commands.Add("spijkermat", "Plaatst een spijkermat.", {}, false, function
 end)
 
 
-QBCore.Commands.Add("kickpolice", "Ontslaat een politiemedewerker.", {{name="id", help="ID"}}, true, function(source, args)
+QBCore.Commands.Add("kickpolice", "Ontslaat een woutmedewerker.", {{name="id", help="ID"}}, true, function(source, args)
     local Player = QBCore.Functions.GetPlayer(tonumber(args[1]))
     local Myself = QBCore.Functions.GetPlayer(source)
     if Player ~= nil then 
@@ -772,14 +772,14 @@ QBCore.Commands.Add("cuff", "Boeit de dichtsbijzijnde speler", {}, false, functi
     end
 end)
 
-QBCore.Commands.Add("palert", "Maakt een melding voor de politie.", {{name="alert", help="De melding die je wilt maken."}}, false, function(source, args)
+QBCore.Commands.Add("palert", "Maakt een melding voor de wout.", {{name="alert", help="De melding die je wilt maken."}}, false, function(source, args)
     local Player = QBCore.Functions.GetPlayer(source)
     
     if (Player.PlayerData.job.name == "police" and Player.PlayerData.job.onduty) then
         if args[1] ~= nil then
             local msg = table.concat(args, " ")
-            TriggerClientEvent("chatMessage", -1, "POLITIE MELDING", "error", msg)
-            TriggerEvent("qb-log:server:CreateLog", "112", "Politie Melding", "blue", "**"..GetPlayerName(source).."** (CitizenID: "..Player.PlayerData.citizenid.." | ID: "..source..") **Alert:** " ..msg, false)
+            TriggerClientEvent("chatMessage", -1, "wout MELDING", "error", msg)
+            TriggerEvent("qb-log:server:CreateLog", "112", "wout Melding", "blue", "**"..GetPlayerName(source).."** (CitizenID: "..Player.PlayerData.citizenid.." | ID: "..source..") **Alert:** " ..msg, false)
             TriggerClientEvent('police:PlaySound', -1)
         else
             TriggerClientEvent('chatMessage', source, "SYSTEEM", "error", "Je hebt geen meldingbeschrijving gemaakt!")
@@ -794,7 +794,7 @@ QBCore.Commands.Add("escort", "Escort a person", {}, false, function(source, arg
     TriggerClientEvent("police:client:EscortPlayer", source)
 end)
 
-QBCore.Commands.Add("databank", "Activeert de politie databank.", {}, false, function(source, args)
+QBCore.Commands.Add("databank", "Activeert de wout databank.", {}, false, function(source, args)
 	local Player = QBCore.Functions.GetPlayer(source)
     if Player.PlayerData.job.name == "police" then
         TriggerClientEvent("police:client:toggleDatabank", source)
@@ -991,7 +991,7 @@ QBCore.Commands.Add("betaaladvocaat", "Betaalt een advocaat 1000 euro.", {{name=
     end
 end)
 
-QBCore.Commands.Add("radar", "Zet de politieradar aan.", {}, false, function(source, args)
+QBCore.Commands.Add("radar", "Zet de woutradar aan.", {}, false, function(source, args)
 	local Player = QBCore.Functions.GetPlayer(source)
     if Player.PlayerData.job.name == "police" then
         TriggerClientEvent("wk:toggleRadar", source)

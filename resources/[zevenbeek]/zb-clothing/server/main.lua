@@ -92,14 +92,14 @@ AddEventHandler('qb-clothing:print', function(data)
     print(data)
 end)
 
--- QBCore.Commands.Add("pet", "Zet je helm op/af.", {}, false, function(source, args)
---     TriggerClientEvent("qb-clothing:client:adjustfacewear", source, 1) -- Hat
--- end)
+QBCore.Commands.Add("pet", "Zet je helm op/af.", {}, false, function(source, args)
+    TriggerClientEvent("qb-clothing:client:adjustfacewear", source, 1) -- Hat
+end)
 
--- QBCore.Commands.Add("bril", "Zet je bril op/af.", {}, false, function(source, args)
--- 	TriggerClientEvent("qb-clothing:client:adjustfacewear", source, 2)
--- end)
+QBCore.Commands.Add("bril", "Zet je bril op/af.", {}, false, function(source, args)
+	TriggerClientEvent("qb-clothing:client:adjustfacewear", source, 2)
+end)
 
--- QBCore.Commands.Add("masker", "Zet je masker op/af.", {}, false, function(source, args)
--- 	TriggerClientEvent("qb-clothing:client:adjustfacewear", source, 4)
--- end)
+QBCore.Commands.Add("masker", "Zet je masker op/af.", {}, false, function(source, args)
+	TriggerClientEvent("qb-clothing:client:adjustfacewear", source, 4)
+end)

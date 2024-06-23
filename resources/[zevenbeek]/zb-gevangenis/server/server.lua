@@ -1,7 +1,7 @@
 QBCore = nil
 TriggerEvent('QBCore:GetObject', function(obj) QBCore = obj end)
 
-QBCore.Commands.Add("celstraf", "Stuurt persoon naar de gevangenis. (Politie)", {{name="maanden", help="Maanden"}, {name="id", help="Spelers ID"}}, true, function(source, args)
+QBCore.Commands.Add("celstraf", "Stuurt persoon naar de gevangenis. (wout)", {{name="maanden", help="Maanden"}, {name="id", help="Spelers ID"}}, true, function(source, args)
     local maanden = tonumber(args[1])
     local spelerID = tonumber(args[2])
     TriggerClientEvent("zb-gevangenis:client:stuurGevangenis", source, maanden, spelerID)

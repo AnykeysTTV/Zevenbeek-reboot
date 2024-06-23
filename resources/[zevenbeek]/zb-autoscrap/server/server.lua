@@ -50,8 +50,8 @@ QBCore.Commands.Add("stopscrap", "Stop je autoscrap missie.", {}, false, functio
 end)
 
 
-RegisterServerEvent('zb-autoscrap:server:belPolitie')
-AddEventHandler('zb-autoscrap:server:belPolitie', function(streetLabel, coords)
+RegisterServerEvent('zb-autoscrap:server:belwout')
+AddEventHandler('zb-autoscrap:server:belwout', function(streetLabel, coords)
     local msg = "Auto diefstal op "..streetLabel..", kom snel!"
     local alertData = {
         title = "Auto Diefstal",
@@ -62,7 +62,7 @@ AddEventHandler('zb-autoscrap:server:belPolitie', function(streetLabel, coords)
         local Player = QBCore.Functions.GetPlayer(v)
         if Player ~= nil then 
             if (Player.PlayerData.job.name == "police" and Player.PlayerData.job.onduty) then
-                TriggerClientEvent("zb-autoscrap:client:belPolitie2", Player.PlayerData.source, msg, streetLabel, coords)
+                TriggerClientEvent("zb-autoscrap:client:belwout2", Player.PlayerData.source, msg, streetLabel, coords)
                 TriggerClientEvent("qb-phone:client:addPoliceAlert", Player.PlayerData.source, alertData)
             end
         end

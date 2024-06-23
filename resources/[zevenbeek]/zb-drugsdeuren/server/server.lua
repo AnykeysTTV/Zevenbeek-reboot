@@ -29,13 +29,13 @@ AddEventHandler("zb-drugsdeuren:server:missieAfleveren", function(aantal)
     
     if Player.Functions.GetItemByName("weed_brick") ~= nil and Player.Functions.GetItemByName("weed_brick").amount >= aantal then
         Player.Functions.RemoveItem("weed_brick", aantal)
-        local politie = GetCurrentCops()
+        local wout = GetCurrentCops()
         local prijs = 50
-        if politie == 1 then
+        if wout == 1 then
             prijs = math.random(250, 500)
-        elseif politie == 2 then
+        elseif wout == 2 then
             prijs = math.random(500, 600)
-        elseif politie >= 3 then
+        elseif wout >= 3 then
             prijs = math.random(750,1000)
         end
 
@@ -44,18 +44,18 @@ AddEventHandler("zb-drugsdeuren:server:missieAfleveren", function(aantal)
     end
 end)
 
--- Haal het aantal Politie agenten op
+-- Haal het aantal wout agenten op
 function GetCurrentCops()
-    local politie = 0
+    local wout = 0
     for k, v in pairs(QBCore.Functions.GetPlayers()) do
         local Player = QBCore.Functions.GetPlayer(v)
         if Player ~= nil then 
             if (Player.PlayerData.job.name == "police" and Player.PlayerData.job.onduty) then
-                politie = politie + 1
+                wout = wout + 1
             end
         end
     end
-    return politie
+    return wout
 end
 
 RegisterNetEvent('qb-anticheat:server:GetLocations')

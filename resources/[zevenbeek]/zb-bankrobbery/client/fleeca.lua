@@ -131,7 +131,7 @@ Citizen.CreateThread(function()
                                             if CurrentCops >= Config.MinimumFleecaPolice then
                                                 openLocker(closestBank, k)
                                             else
-                                                QBCore.Functions.Notify("Onvoldoende politie!", "error")
+                                                QBCore.Functions.Notify("Onvoldoende wout!", "error")
                                             end
                                         end
                                     end
@@ -220,7 +220,7 @@ AddEventHandler('electronickit:UseElectronickit', function()
                                 QBCore.Functions.Notify("Het ziet er naar uit dat deze bank al overvallen is!", "error")
                             end
                         else
-                            QBCore.Functions.Notify("Onvoldoende politie!", "error")
+                            QBCore.Functions.Notify("Onvoldoende wout!", "error")
                         end
                     end
                 end

@@ -20,7 +20,7 @@ QB.Spawns = {
             h = 3.5 
         },
         location = "policedp",
-        label = "Politie Bureau Stad",
+        label = "wout Bureau Stad",
     },
 
     ["paleto"] = {

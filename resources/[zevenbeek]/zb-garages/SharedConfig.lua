@@ -84,7 +84,7 @@ Garages = {
         spawnPoint = {x = 1688.58, y = 4792.17, z = 41.92, h = 145.75}, 
         putVehicle = {x = 1691.24, y = 4782.28, z = 41.92},
     },
-    ["politiehb"] = {
+    ["wouthb"] = {
         label = "Hoofdbureau Parking",
         takeVehicle = {x = 427.31, y = -1010.99, z = 28.96, h = 185.93},
         spawnPoint = {x = 431.41, y = -1008.91, z = 28.76, h = 175.85}, 

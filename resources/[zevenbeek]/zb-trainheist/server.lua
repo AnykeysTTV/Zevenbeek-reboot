@@ -127,8 +127,8 @@ AddEventHandler('trainheist:server:resetHeist', function()
     TriggerClientEvent('trainheist:client:resetHeist', -1)
 end)
 
-RegisterNetEvent("zb-trainheist:server:belPolitie")
-AddEventHandler("zb-trainheist:server:belPolitie", function(straat, coords)
+RegisterNetEvent("zb-trainheist:server:belwout")
+AddEventHandler("zb-trainheist:server:belwout", function(straat, coords)
     local msg = "Merryweather trein overval"
     local alertData = {
         title = "Merryweather trein overval",
@@ -139,7 +139,7 @@ AddEventHandler("zb-trainheist:server:belPolitie", function(straat, coords)
         local Player = QBCore.Functions.GetPlayer(v)
         if Player ~= nil then
             if (Player.PlayerData.job.name == "police" and Player.PlayerData.job.onduty) then
-                TriggerClientEvent("zb-trainheist:client:belPolitieBericht", Player.PlayerData.source, msg, straat, coords)
+                TriggerClientEvent("zb-trainheist:client:belwoutBericht", Player.PlayerData.source, msg, straat, coords)
                 TriggerClientEvent("qb-phone:client:addPoliceAlert", Player.PlayerData.source, alertData)
             end
         end

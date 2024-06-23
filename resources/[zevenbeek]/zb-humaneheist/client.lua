@@ -142,7 +142,7 @@ Citizen.CreateThread(function()
         if alarmDist < 5 then
             if not alarm then
                 TriggerServerEvent("zb-humaneheist:server:triggerscoreboard")
-                belPolitie()
+                belwout()
                 alarm = true
             end
         end
@@ -664,7 +664,7 @@ AddEventHandler('humanelabsheist:client:wearWetsuit', function()
     end
 end)
 
-function belPolitie()
+function belwout()
     local ped = GetPlayerPed(-1)
     local pos = GetEntityCoords(ped)
     local s1, s2 = Citizen.InvokeNative(0x2EB41072B4C1E4C0, pos.x, pos.y, pos.z, Citizen.PointerValueInt(), Citizen.PointerValueInt())
@@ -674,11 +674,11 @@ function belPolitie()
     if street2 ~= nil then 
         streetLabel = streetLabel .. " " .. street2
     end
-    TriggerServerEvent('zb-humaneheist:server:belPolitie', streetLabel, pos)
+    TriggerServerEvent('zb-humaneheist:server:belwout', streetLabel, pos)
 end
 
-RegisterNetEvent('zb-humaneheist:client:belPolitieBericht')
-AddEventHandler('zb-humaneheist:client:belPolitieBericht', function(msg, streetLabel, coords)
+RegisterNetEvent('zb-humaneheist:client:belwoutBericht')
+AddEventHandler('zb-humaneheist:client:belwoutBericht', function(msg, streetLabel, coords)
     TriggerEvent('qb-policealerts:client:AddPoliceAlert', {
         timeOut = 5000,
         alertTitle = "Overval gaande op Humane Labs",

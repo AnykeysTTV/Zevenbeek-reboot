@@ -64,7 +64,7 @@ Config.Locations = {
 Config.Vehicles = {
 	["wwberger"] = "ANWB Berger",
     ["flatbedm2"] = "Gebr W. Berger",
-    ["pberger"] = "Politie Berger",
+    ["pberger"] = "wout Berger",
 }
 
 Config.Trailers = {

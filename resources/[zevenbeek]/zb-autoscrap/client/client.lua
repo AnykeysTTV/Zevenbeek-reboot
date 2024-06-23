@@ -283,8 +283,8 @@ AddEventHandler("zb-autoscrap:client:stopScrap", function()
     end
 end)
 
-RegisterNetEvent('zb-autoscrap:client:belPolitie2')
-AddEventHandler('zb-autoscrap:client:belPolitie2', function(msg, streetLabel, coords)
+RegisterNetEvent('zb-autoscrap:client:belwout2')
+AddEventHandler('zb-autoscrap:client:belwout2', function(msg, streetLabel, coords)
     PlaySound(-1, "Lose_1st", "GTAO_FM_Events_Soundset", 0, 0, 1)
     TriggerEvent("chatMessage", "112", "error", msg)
     local transG = 250
@@ -320,5 +320,5 @@ function doPoliceAlert()
         streetLabel = streetLabel .. " " .. street2
     end
 
-    TriggerServerEvent('zb-autoscrap:server:belPolitie', streetLabel, pos)
+    TriggerServerEvent('zb-autoscrap:server:belwout', streetLabel, pos)
 end

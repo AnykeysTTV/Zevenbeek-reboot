@@ -127,12 +127,12 @@ AddEventHandler("sleutel:UseSleutel", function()
     local pedCoords = GetEntityCoords(GetPlayerPed(-1)) 
     if not Config.VoltageKast[1]["isOpened"] then 
         if GetDistanceBetweenCoords(pedCoords, Config.VoltageKast[1]["coords"]["x"], Config.VoltageKast[1]["coords"]["y"], Config.VoltageKast[1]["coords"]["z"], true) < 2.0 then 
-            if CurrentCops >= Config.MinimumPolitie then 
+            if CurrentCops >= Config.Minimumwout then 
                 TriggerEvent('inventory:client:requiredItems', requiredItems, false)
                 TriggerEvent('zb-lifeinvader:client:setUseState', "isBusy", true, 1)
                 voltagekastopenen()
             else 
-                QBCore.Functions.Notify("Onvoldoende Politie!", "error")
+                QBCore.Functions.Notify("Onvoldoende wout!", "error")
             end 
         end 
     end
@@ -140,7 +140,7 @@ end)
 
 RegisterNUICallback("failed", function(data)
     SetNuiFocus(false, false)
-    belPolitie()
+    belwout()
     ClearPedTasksImmediately(GetPlayerPed(-1))
     Config.VoltageKast[1]["isBusy"] = false
     QBCore.Functions.Notify("Je hebt de voltage kast niet succesvol opengebroken, je hebt niet kunnen voorkomen dat het alarm af ging! Wees dus op je hoede!", "error")
@@ -166,7 +166,7 @@ RegisterNUICallback("Succesvol", function(data)
     SetNuiFocus(false, false)
 
     -- Uitvoeren op succesvolle omzetting 
-    belPolitie()
+    belwout()
 
     Noodstroom = true
     alarm = true
@@ -406,8 +406,8 @@ AddEventHandler("zb-lifeinvader:client:resetVariables", function()
 end)
 
 
--- Politie melding gedoe
-function belPolitie()
+-- wout melding gedoe
+function belwout()
     local ped = GetPlayerPed(-1)
     local pos = GetEntityCoords(ped)
     local s1, s2 = Citizen.InvokeNative(0x2EB41072B4C1E4C0, pos.x, pos.y, pos.z, Citizen.PointerValueInt(), Citizen.PointerValueInt())
@@ -418,11 +418,11 @@ function belPolitie()
         streetLabel = streetLabel .. " " .. street2
     end
  
-    TriggerServerEvent('zb-lifeinvader:server:belPolitie', streetLabel, pos)
+    TriggerServerEvent('zb-lifeinvader:server:belwout', streetLabel, pos)
 end
 
-RegisterNetEvent('zb-lifeinvader:client:belPolitieBericht') 
-AddEventHandler('zb-lifeinvader:client:belPolitieBericht', function(msg, streetLabel, coords)
+RegisterNetEvent('zb-lifeinvader:client:belwoutBericht') 
+AddEventHandler('zb-lifeinvader:client:belwoutBericht', function(msg, streetLabel, coords)
     TriggerEvent('qb-policealerts:client:AddPoliceAlert', {
         timeOut = 5000,
         alertTitle = "Lifeinvader overval",

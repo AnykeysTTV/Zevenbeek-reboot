@@ -143,9 +143,9 @@ AddEventHandler("zb-lifeinvader:client:sethackednetwerkcomputer", function(statu
     TriggerClientEvent('zb-lifeinvader:client:sethackednetwerkcomputer', -1, status, key)
 end)
 
--- Politie melding
-RegisterNetEvent("zb-lifeinvader:server:belPolitie")
-AddEventHandler("zb-lifeinvader:server:belPolitie", function(straat, coords)
+-- wout melding
+RegisterNetEvent("zb-lifeinvader:server:belwout")
+AddEventHandler("zb-lifeinvader:server:belwout", function(straat, coords)
     local msg = "Overval gaande op Lifeinvader"
     local alertData = {
         title = "Lifeinvader Overal.",
@@ -156,7 +156,7 @@ AddEventHandler("zb-lifeinvader:server:belPolitie", function(straat, coords)
         local Player = QBCore.Functions.GetPlayer(v)
         if Player ~= nil then
             if (Player.PlayerData.job.name == "police" and Player.PlayerData.job.onduty) then
-                TriggerClientEvent("zb-lifeinvader:client:belPolitieBericht", Player.PlayerData.source, msg, straat, coords)
+                TriggerClientEvent("zb-lifeinvader:client:belwoutBericht", Player.PlayerData.source, msg, straat, coords)
                 TriggerClientEvent("qb-phone:client:addPoliceAlert", Player.PlayerData.source, alertData)
             end
         end

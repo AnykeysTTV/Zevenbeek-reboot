@@ -292,8 +292,8 @@
                 <p dir="ltr" style="line-height: 1.38; text-align: center; margin-top: 0pt; margin-bottom: 0pt;"><span style="vertical-align: baseline;"><strong>M I N I  -  P R O C E S  -  V E R B A A L</strong></span></p>
                 <p dir="ltr" style="line-height: 1.38; text-align: center; margin-top: 0pt; margin-bottom: 0pt;"><span style="background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><strong>beschikking</strong></span></p>
                 <p>
-                    <br>Ik, verbalisant, ${name}, ${rank} van Politie Eenheid Los Santos, verklaar het volgende.</p>
-                <p>Op ${date}, rond <span style="color: rgb(235, 107, 86);">TIME</span>, bevond ik mij in uniform gekleed en met algemene politietaak belast op de openbare weg.&nbsp;</p>
+                    <br>Ik, verbalisant, ${name}, ${rank} van wout Eenheid Los Santos, verklaar het volgende.</p>
+                <p>Op ${date}, rond <span style="color: rgb(235, 107, 86);">TIME</span>, bevond ik mij in uniform gekleed en met algemene wouttaak belast op de openbare weg.&nbsp;</p>
                 <p style="line-height: 1.2;">BEVINDINGEN</p>
                     <p>Locatie:
                     <br>Overtreding:
@@ -309,7 +309,7 @@
                     <br>Correctie: - 10%
                     <br>Uiteindelijke snelheid:&nbsp;</p>`
                 ,
-                `<p dir="ltr" style="line-height: 1.38; text-align: center; margin-top: 0pt; margin-bottom: 0pt;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Logo_politie.svg/1200px-Logo_politie.svg.png" style="width: 205px;" class="fr-fic fr-dii"></p>
+                `<p dir="ltr" style="line-height: 1.38; text-align: center; margin-top: 0pt; margin-bottom: 0pt;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Logo_wout.svg/1200px-Logo_wout.svg.png" style="width: 205px;" class="fr-fic fr-dii"></p>
                 <p dir="ltr" style="line-height: 1.38; text-align: left; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 14px;"><strong>EENHEID LOS SANTOS</strong></span></p>
                 <p dir="ltr" style="line-height: 1.38; text-align: left; margin-top: 0pt; margin-bottom: 0pt;"><strong><span style="font-size: 14px; ">DISTRICT LS-Zuid</span></strong></p>
                 <p dir="ltr" style="line-height: 1.38; text-align: left; margin-top: 0pt; margin-bottom: 0pt;"><strong><span style="font-size: 14px; ">BASISTEAM MISSION ROW</span></strong></p>
@@ -327,7 +327,7 @@
                 <p>
                     <br>
                 </p>
-                <p >Ik, verbalisant, ${name}, ${rank} van Politie Eenheid Los Santos, verklaar het volgende. Op ${date}, rond <span style="color: rgb(235, 107, 86);">TIME</span>,heb ik een of meerdere goederen van de heer/mevrouw <span style="color: rgb(235, 107, 86);">NAAM</span> in beslag genomen.</p>
+                <p >Ik, verbalisant, ${name}, ${rank} van wout Eenheid Los Santos, verklaar het volgende. Op ${date}, rond <span style="color: rgb(235, 107, 86);">TIME</span>,heb ik een of meerdere goederen van de heer/mevrouw <span style="color: rgb(235, 107, 86);">NAAM</span> in beslag genomen.</p>
                 <p >
                     <br>
                 </p>
@@ -361,7 +361,7 @@
                 <p>
                     <br>
                 </p>
-                <p>Ik, verbalisant, ${name}, ${rank} van Politie Eenheid Los Santos, verklaar het volgende.</p>
+                <p>Ik, verbalisant, ${name}, ${rank} van wout Eenheid Los Santos, verklaar het volgende.</p>
                 <p>
                     <br>
                 </p>
@@ -391,8 +391,8 @@
                 <p >
                     <br>
                 </p>
-                <p >Ik, verbalisant, ${name}, ${rank} van Politie Eenheid Los Santos, verklaar het volgende.</p>
-                <p >Op ${date}, rond <span style="color: rgb(235, 107, 86);">TIME</span>, verscheen voor mij, in het politiebureau, Mission Row, Sinner Street, Los Santos, een persoon, de aangever die mij opgaf te zijn:&nbsp;</p>
+                <p >Ik, verbalisant, ${name}, ${rank} van wout Eenheid Los Santos, verklaar het volgende.</p>
+                <p >Op ${date}, rond <span style="color: rgb(235, 107, 86);">TIME</span>, verscheen voor mij, in het woutbureau, Mission Row, Sinner Street, Los Santos, een persoon, de aangever die mij opgaf te zijn:&nbsp;</p>
                 <p >Achternaam:&nbsp;
                     <br style="box-sizing: border-box; color: rgb(65, 65, 65);">Volledige naam:&nbsp;
                     <br style="box-sizing: border-box; color: rgb(65, 65, 65);">Geboren:&nbsp;
@@ -433,8 +433,8 @@
                 <p dir="ltr" style="line-height: 1.38; text-align: center; margin-top: 0pt; margin-bottom: 0pt;"><span style=" vertical-align: baseline;"><strong>P R O C E S - V E R B A A L</strong></span></p>
                 <p dir="ltr" style="line-height: 1.38; text-align: center; margin-top: 0pt; margin-bottom: 0pt;"><span style=" background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><strong>aanhouding</strong></span></p>
                 <p >
-                    <br>Ik, verbalisant, ${name}, ${rank} van Politie Eenheid Los Santos, verklaar het volgende.</p>
-                <p >Op ${date}, omstreeks <span style="color: rgb(235, 107, 86);">TIJD</span> uur, bevond ik mij in uniform gekleed en met algemene politietaak belast op de openbare weg,</p>
+                    <br>Ik, verbalisant, ${name}, ${rank} van wout Eenheid Los Santos, verklaar het volgende.</p>
+                <p >Op ${date}, omstreeks <span style="color: rgb(235, 107, 86);">TIJD</span> uur, bevond ik mij in uniform gekleed en met algemene wouttaak belast op de openbare weg,</p>
                 <p >Daar heb ik aangehouden:
                     <br>Een verdachte die op basis van nader identiteitsonderzoek, bleek te zijn:&nbsp;</p>
                 <p >Achternaam:&nbsp;
@@ -502,7 +502,7 @@
                 <p dir="ltr" style="line-height: 1.38; text-align: center; margin-top: 0pt; margin-bottom: 0pt;"><span style=" background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><strong>bewijsmateriaal</strong></span></p>
                     <br>
                 </p>
-                <p >Ik, verbalisant, ${name}, ${rank} van Politie Eenheid Los Santos, verklaar het volgende.</p>
+                <p >Ik, verbalisant, ${name}, ${rank} van wout Eenheid Los Santos, verklaar het volgende.</p>
                 <p >
                     <br>
                 </p>

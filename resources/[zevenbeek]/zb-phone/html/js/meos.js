@@ -197,12 +197,12 @@ $(document).on('click', '.confirm-search-person-test', function(e){
                     $("#person-"+i).data("PersonData", person);
                 });
             } else {
-                QB.Phone.Notifications.Add("politie", "MEOS", "Er zijn geen zoekresultaten!");
+                QB.Phone.Notifications.Add("wout", "MEOS", "Er zijn geen zoekresultaten!");
                 $(".person-search-results").html("");
             }
         });
     } else {
-        QB.Phone.Notifications.Add("politie", "MEOS", "Er zijn geen zoekresultaten!");
+        QB.Phone.Notifications.Add("wout", "MEOS", "Er zijn geen zoekresultaten!");
         $(".person-search-results").html("");
     }
 });
@@ -223,12 +223,12 @@ $(document).on('click', '.confirm-search-person-house', function(e){
                     $("#personhouse-"+i).data("HouseData", house);
                 });
             } else {
-                QB.Phone.Notifications.Add("politie", "MEOS", "Er zijn geen zoekresultaten!");
+                QB.Phone.Notifications.Add("wout", "MEOS", "Er zijn geen zoekresultaten!");
                 $(".person-search-results").html("");
             }
         });
     } else {
-        QB.Phone.Notifications.Add("politie", "MEOS", "Er zijn geen zoekresultaten!");
+        QB.Phone.Notifications.Add("wout", "MEOS", "Er zijn geen zoekresultaten!");
         $(".person-search-results").html("");
     }
 });
@@ -259,7 +259,7 @@ $(document).on('click', '.confirm-search-vehicle', function(e){
             }
         });
     } else {
-        QB.Phone.Notifications.Add("politie", "MEOS", "Er zijn geen zoekresultaten!");
+        QB.Phone.Notifications.Add("wout", "MEOS", "Er zijn geen zoekresultaten!");
         $(".vehicle-search-results").html("");
     }
 });
@@ -281,7 +281,7 @@ $(document).on('click', '.scan-search-vehicle', function(e){
             var VehicleElement = '<div class="vehicle-search-result"> <div class="vehicle-search-result-name">'+vehicle.label+'</div> <div class="vehicle-search-result-plate">Kentekenplaat: '+vehicle.plate+'</div> <div class="vehicle-opensplit"></div> &nbsp; <div class="vehicle-search-result-owner">Eigenaar: '+vehicle.owner+'</div> &nbsp; <div class="vehicle-search-result-apk">APK: '+APK+'</div> <div class="vehicle-search-result-warrant">Gesignaleerd: '+Flagged+'</div> </div>'
             $(".vehicle-search-results").append(VehicleElement);
         } else {
-            QB.Phone.Notifications.Add("politie", "MEOS", "Geen voertuig dichtbij!");
+            QB.Phone.Notifications.Add("wout", "MEOS", "Geen voertuig dichtbij!");
             $(".vehicle-search-results").append("");
         }
     });
@@ -314,7 +314,7 @@ $(document).on('click', '.meos-recent-alert', function(e){
             alert: alertData,
         }));
     } else {
-        QB.Phone.Notifications.Add("politie", "MEOS", "Deze melding bevat geen locatie!");
+        QB.Phone.Notifications.Add("wout", "MEOS", "Deze melding bevat geen locatie!");
     }
 });
 
@@ -329,5 +329,5 @@ $(document).on('click', '.meos-location-button', function(e){
 $(document).on('click', '.meos-clear-alerts', function(e){
     $(".meos-alerts").html("");
     $(".meos-recent-alerts").html('<div class="meos-recent-alert"> <span class="meos-recent-alert-title">Je hebt geen meldingen!</span></div>');
-    QB.Phone.Notifications.Add("politie", "MEOS", "Alle meldingen zijn verwijderd!");
+    QB.Phone.Notifications.Add("wout", "MEOS", "Alle meldingen zijn verwijderd!");
 });

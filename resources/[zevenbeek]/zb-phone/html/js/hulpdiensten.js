@@ -8,11 +8,11 @@ SetupHulpdiensten = function() {
     document.getElementById("hulpdiensten-bericht-anwb").style.display = "none";
 }
 
-var selectiePolitie = document.getElementById("selectie-politie");
+var selectiewout = document.getElementById("selectie-wout");
 var selectieAmbulance = document.getElementById("selectie-ambulance");
 var selectieANWB = document.getElementById("selectie-anwb");
 
-selectiePolitie.addEventListener("click", function() {
+selectiewout.addEventListener("click", function() {
     document.getElementById("hulpdiensten-selectie").style.display = "none";
     document.getElementById("hulpdiensten-bericht-112").style.display = "block";
 });
@@ -38,7 +38,7 @@ document.getElementById("hulpdiensten-bericht-112-versturen").addEventListener("
             bericht: bericht
         }));
         
-        QB.Phone.Notifications.Add("fas fa-bell", "Hulpdiensten", "Je melding is verzonden naar de Politie!");
+        QB.Phone.Notifications.Add("fas fa-bell", "Hulpdiensten", "Je melding is verzonden naar de wout!");
     
         document.getElementById("hulpdiensten-bericht-112-bericht").value = "";
         document.getElementById("hulpdiensten-selectie").style.display = "flex";

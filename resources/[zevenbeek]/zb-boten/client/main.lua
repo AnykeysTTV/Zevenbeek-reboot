@@ -50,7 +50,7 @@ AddEventHandler("QBCore:Client:OnPlayerLoaded", function()
         SetBlipColour(PoliceBlip, 29)
 
         BeginTextCommandSetBlipName("STRING")
-        AddTextComponentSubstringPlayerName("Politiehaven")
+        AddTextComponentSubstringPlayerName("wouthaven")
         EndTextCommandSetBlipName(PoliceBlip)
         PoliceBlip = AddBlipForCoord(QBBoatshop.PoliceBoat2.x, QBBoatshop.PoliceBoat2.y, QBBoatshop.PoliceBoat2.z)
         SetBlipSprite(PoliceBlip, 410)
@@ -60,7 +60,7 @@ AddEventHandler("QBCore:Client:OnPlayerLoaded", function()
         SetBlipColour(PoliceBlip, 29)
     
         BeginTextCommandSetBlipName("STRING")
-        AddTextComponentSubstringPlayerName("Politiehaven")
+        AddTextComponentSubstringPlayerName("wouthaven")
         EndTextCommandSetBlipName(PoliceBlip)
     end
 end)

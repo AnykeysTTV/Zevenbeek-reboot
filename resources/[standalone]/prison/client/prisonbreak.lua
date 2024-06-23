@@ -121,7 +121,7 @@ AddEventHandler('electronickit:UseElectronickit', function()
                         flags = 16,
                     }, {}, {}, function() -- Done
                         StopAnimTask(GetPlayerPed(-1), "anim@gangops@facility@servers@", "hotwire", 1.0)
-                        TriggerServerEvent("prison:server:directAlarmPolitie")
+                        TriggerServerEvent("prison:server:directAlarmwout")
                         TriggerEvent("mhacking:show")
                         TriggerEvent("mhacking:start", math.random(5, 9), math.random(10, 18), OnHackDone)
                         if math.random(1,2) == 1 then

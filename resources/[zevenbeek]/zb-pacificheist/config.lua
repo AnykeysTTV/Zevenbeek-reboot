@@ -165,7 +165,7 @@ Strings = {
     ['need_this'] = 'Je hebt dit nodig: ',
     ['deliver_to_buyer'] = 'Breng de spullen naar de koper op de map! Te herkennen aan het geld incoontje! Zorg dat de persoon die meet alles mee heeft anders kan je het niet meer inleveren!',
     ['buyer_blip'] = 'Koper',
-    ['need_police'] = 'Er is niet genoeg politie aanwezig!',
+    ['need_police'] = 'Er is niet genoeg wout aanwezig!',
     ['total_money'] = 'Je hebt dit: ',
     ['police_alert'] = 'Pacific Bank robbery alert! Check your gps.',
 }

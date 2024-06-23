@@ -21,22 +21,22 @@ end)
 local startende = false
 local timedout = false
 local timeout = 600000 -- 1 uur
-local politieBenodigd = 3
+local woutBenodigd = 3
 
 RegisterNetEvent("zb-plofkraak:client:StartKraak")
 AddEventHandler("zb-plofkraak:client:StartKraak", function()
     local hour = GetClockHours()
     if not IsPedInAnyVehicle(PlayerPedId(), false) then
 	    if hour >= 22 or hour <= 5 then
-            QBCore.Functions.TriggerCallback('zb-plofkraak:server:vraagPolitieOp', function(aantalPolitie)
-                if aantalPolitie >= politieBenodigd then
+            QBCore.Functions.TriggerCallback('zb-plofkraak:server:vraagwoutOp', function(aantalwout)
+                if aantalwout >= woutBenodigd then
                     if not timedout then
                         startende = true
                     else
                         QBCore.Functions.Notify("Er is zojuist een overval geweest, wacht een uur voordat je nog een plofkraak kan doen!")
                     end
                 else
-                    QBCore.Functions.Notify("Er is niet genoeg politie in dienst!", "error")
+                    QBCore.Functions.Notify("Er is niet genoeg wout in dienst!", "error")
                 end
             end)
         else
@@ -58,7 +58,7 @@ Citizen.CreateThread(function()
 				if startende then
                     TriggerServerEvent("zb-plofkraak:server:ZetGlobaleTimeOut")
 					-- if IsControlJustPressed(0, 47) then
-					belPolitie()
+					belwout()
 					startende = false
 					QBCore.Functions.Progressbar("smeren", "Bom aan het voorbereiden...", 7500, false, false, {
 						disableMovement = true,
@@ -187,8 +187,8 @@ function startBoren()
     end)
 end 
 
-RegisterNetEvent('zb-plofkraak:client:belPolitieBericht')
-AddEventHandler('zb-plofkraak:client:belPolitieBericht', function(msg, streetLabel, coords)
+RegisterNetEvent('zb-plofkraak:client:belwoutBericht')
+AddEventHandler('zb-plofkraak:client:belwoutBericht', function(msg, streetLabel, coords)
     TriggerEvent('qb-policealerts:client:AddPoliceAlert', {
         timeOut = 5000,
         alertTitle = "Mogelijke Plofkraak",
@@ -258,7 +258,7 @@ function isNight()
 	end
 end
 
-function belPolitie()
+function belwout()
     local ped = GetPlayerPed(-1)
     local pos = GetEntityCoords(ped)
     local s1, s2 = Citizen.InvokeNative(0x2EB41072B4C1E4C0, pos.x, pos.y, pos.z, Citizen.PointerValueInt(), Citizen.PointerValueInt())
@@ -268,7 +268,7 @@ function belPolitie()
     if street2 ~= nil then 
         streetLabel = streetLabel .. " " .. street2
     end
-    TriggerServerEvent('zb-plofkraak:server:belPolitie', streetLabel, pos)
+    TriggerServerEvent('zb-plofkraak:server:belwout', streetLabel, pos)
 end
 
 function IsWearingHandshoes()
