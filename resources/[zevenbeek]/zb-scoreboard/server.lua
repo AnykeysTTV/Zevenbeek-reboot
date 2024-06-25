@@ -179,3 +179,8 @@ end)
 QBCore.Commands.Add("scoreboard", "Opent het scoreboard.", {}, false, function(source, args)
     TriggerClientEvent('zb-scoreboard:client:openScoreboard', source)
 end)
+
+QBCore.Commands.Add("id", "Je ID/Geluksnummer/Paypal.", {}, false, function(source, args)
+    if source == nil or source == -1 then return end
+    TriggerClientEvent("QBCore:Notiry", source, "Je geluksnummer is ".. source, "primary")
+end)
