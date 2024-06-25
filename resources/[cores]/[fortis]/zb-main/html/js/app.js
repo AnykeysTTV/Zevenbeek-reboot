@@ -28,6 +28,10 @@ function notificatie(text, type, length) {
     if (length == null) {
         length = 4200;
     }
+    
+    if(type == null || type == undefined) {
+        type = "primary";
+    }
 
     if (type == "success") {
         typeIcon = "fa-check-circle";
@@ -35,7 +39,10 @@ function notificatie(text, type, length) {
         typeIcon = "fa-exclamation-circle";
     } else if (type == "primary") {
         typeIcon = "fa-bell";
+    }else{
+        typeIcon = "fa-bell";
     }
+ 
 
 
 
