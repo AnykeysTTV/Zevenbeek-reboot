@@ -13,3 +13,8 @@ server.cfg
 *.bkp
 dev_config/**
 key.cfg
+server.cfg
+resources/assets.rar
+resources/[zevenbeek]/zb-customdrugs/.VSCodeCounter/2021-03-22_21-39-38/results.csv
+resources/[zevenbeek]/zb-customdrugs/.VSCodeCounter/
+server.cfg

@@ -554,14 +554,14 @@ end
 QBCore.Player.DeleteCharacter = function(source, citizenid)
 	QBCore.Functions.ExecuteSql(true, "DELETE FROM `players` WHERE `citizenid` = '"..citizenid.."'")
 
-	-- Logs begin
-	local fortisLogsTable = {
-		["steamnaam"] = GetPlayerName(self.PlayerData.source),
-		["citizenid"] = citizenid,
-		["actie"] = "Verwijderd"
-	}
-	exports["zblogs"]:addLog("character", fortisLogsTable)
-	-- Logs einde
+	-- -- Logs begin
+	-- local fortisLogsTable = {
+	-- 	["steamnaam"] = GetPlayerName(self.PlayerData.source),
+	-- 	["citizenid"] = citizenid,
+	-- 	["actie"] = "Verwijderd"
+	-- }
+	-- exports["zblogs"]:addLog("character", fortisLogsTable)
+	-- -- Logs einde
 
 	TriggerEvent("qb-log:server:sendLog", citizenid, "characterdeleted", {})
 	TriggerEvent("qb-log:server:CreateLog", "joinleave", "Karakter Verwijderd", "red", "**".. GetPlayerName(source) .. "** ("..GetPlayerIdentifiers(source)[1]..") verwijderde **"..citizenid.."**..")

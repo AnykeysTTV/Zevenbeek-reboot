@@ -4,11 +4,11 @@ Citizen.CreateThread(function()
 
 		SetDiscordRichPresenceAsset('logo-mk1')
 
-        SetDiscordRichPresenceAssetText('🔗 https://discord.gg/yAaPrEk6VU')
+        SetDiscordRichPresenceAssetText('🔗 '.. GetConvar('Discord', 'https://discord.gg/fxuqDutUK5') )
 
         SetDiscordRichPresenceAssetSmallText('Zevenbeek Rebooted')
 
-		SetDiscordRichPresenceAction(0, "Discord Server", "https://discord.gg/yAaPrEk6VU")
+		SetDiscordRichPresenceAction(0, "Discord Server", GetConvar('Discord', 'https://discord.gg/fxuqDutUK5') )
 		SetDiscordRichPresenceAction(1, "Join Server", "fivem://connect/cfx.re/join/jboypa")
 		--SetDiscordRichPresenceAction(1, "Speel mee", "fivem://connect/play.fortisroleplay.nl")
 
